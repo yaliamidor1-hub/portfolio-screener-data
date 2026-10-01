@@ -122,19 +122,23 @@ async function pace() {
 }
 
 /**
- * GET JSON with pacing and retry/backoff. 404 is a normal answer (a company that does
- * not use a tag): { status: 404 }. Never logs headers (the User-Agent holds the email).
- * Returns { status, data? , error? }.
+ * GET with pacing and retry/backoff. 404 is a normal answer (e.g. a company that does not
+ * use a tag): { status: 404 }. Never logs headers (the User-Agent holds the email).
+ * mode 'json' -> data = parsed JSON; 'text' -> data = response text.
+ * Returns { status, data?, error? }.
  */
-export async function getJson(url, userAgent, fetchImpl = fetch) {
+async function request(url, userAgent, fetchImpl, mode) {
   let last = { status: 0, error: 'no attempt' };
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     await pace();
     try {
-      const res = await fetchImpl(url, { headers: { 'User-Agent': userAgent, Accept: 'application/json' } });
+      const res = await fetchImpl(url, {
+        headers: { 'User-Agent': userAgent, Accept: mode === 'json' ? 'application/json' : 'text/html,application/xhtml+xml,*/*' },
+        signal: AbortSignal.timeout(90_000),
+      });
       if (res.status === 200) {
-        try { return { status: 200, data: await res.json() }; }
-        catch { return { status: 200, error: 'invalid JSON' }; }
+        try { return { status: 200, data: mode === 'json' ? await res.json() : await res.text() }; }
+        catch { return { status: 200, error: mode === 'json' ? 'invalid JSON' : 'unreadable body' }; }
       }
       if (res.status === 404) return { status: 404 };
       last = { status: res.status, error: `HTTP ${res.status}` };
@@ -152,6 +156,8 @@ export async function getJson(url, userAgent, fetchImpl = fetch) {
   return last;
 }
 
+export const getJson = (url, userAgent, fetchImpl = fetch) => request(url, userAgent, fetchImpl, 'json');
+export const getText = (url, userAgent, fetchImpl = fetch) => request(url, userAgent, fetchImpl, 'text');
 /* ---------- main ---------- */
 
 async function readJsonIfExists(file) {

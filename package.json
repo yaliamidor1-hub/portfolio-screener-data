@@ -4,7 +4,8 @@
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
-    "test": "node --test scripts/fetch_sec.test.mjs",
-    "fetch": "node scripts/fetch_sec.mjs"
+    "test": "node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs",
+    "fetch": "node scripts/fetch_sec.mjs",
+    "fetch:filings": "node scripts/fetch_filings.mjs"
   }
 }

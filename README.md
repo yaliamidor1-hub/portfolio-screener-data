@@ -22,6 +22,22 @@ Data refreshes **once a day** (04:00 UTC). A bundle is rewritten only when its d
 is 3+ days old, so most days only `meta.json` changes. If a ticker fails, its previous file is
 kept; the consumer ignores any file older than 5 days.
 
+## Filings for Stage 2 (qualitative analysis)
+
+`scripts/fetch_filings.mjs` (second workflow step) publishes the text of the latest annual report per ticker:
+
+| File | Content |
+|---|---|
+| `data/filings/<TICKER>.json` | `{ ticker, form, accession, filingDate, reportDate, sourceUrl, extractorVersion, sections: { business, riskFactors, mdna, legal }, generatedAt }` |
+
+Form = newest original 10-K (20-F / 40-F for foreign filers; no 10-K/A). Sections are plain text after
+stripping HTML, capped at 6000 (Item 1 Business), 10000 (Item 1A Risk Factors), 8000 (Item 7 MD&A) and
+3000 (Item 3 Legal Proceedings) characters; a section that cannot be located is `null` (never guessed).
+20-F extraction is best effort (Items 4, 3.D, 5, 8 Legal Proceedings); 40-F gives all `null` (content is in
+exhibits). Per ticker per day: one `data.sec.gov/submissions` call; the document is downloaded only when
+the accession changed (or `EXTRACTOR_VERSION` was bumped). Skip/failure reasons are in `data/meta.json` under
+`filings`. Same rate limit (<= 4.5 req/s) and secret-only User-Agent as the XBRL step.
+
 ## Setup
 
 1. Add the secret (it prompts for the value; nothing is stored in the repo):
@@ -34,7 +50,8 @@ kept; the consumer ignores any file older than 5 days.
 ## Local use
 
 ```
-node --test scripts/fetch_sec.test.mjs        # unit tests (no network)
+node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs   # unit tests (no network)
+SEC_CONTACT_EMAIL=you@example.com node scripts/fetch_filings.mjs
 SEC_CONTACT_EMAIL=you@example.com node scripts/fetch_sec.mjs
 ```
 
@@ -42,5 +59,4 @@ Requires Node 20+, no dependencies.
 
 ## Planned
 
-Stage 2 of the screener will also need 10-K sections (Risk Factors, MD&A); this bridge is
-where they will be published.
+Possible later additions: 10-Q text, earnings-call transcripts (only if a free, permitted source exists).

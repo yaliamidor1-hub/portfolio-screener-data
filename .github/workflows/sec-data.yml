@@ -17,7 +17,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Unit tests
-        run: node --test scripts/fetch_sec.test.mjs
+        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs
 
       - name: Fetch SEC data
         env:
@@ -34,6 +34,15 @@ jobs:
           # secret (gh secret set SEC_CONTACT_EMAIL); never written to any file or log.
           SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
         run: node scripts/fetch_sec.mjs
+
+      # Latest 10-K / 20-F text sections for Stage 2. One submissions call per ticker per day;
+      # the document is downloaded only when the accession changed. Runs even if the step
+      # above failed (it reuses the CIKs from existing data/<TICKER>.json files).
+      - name: Fetch latest annual filings (Stage 2 text)
+        if: always()
+        env:
+          SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+        run: node scripts/fetch_filings.mjs
 
       # Runs even if the fetch exited non-zero, so meta.json (with the failure reasons)
       # is published; per-ticker files are only ever written on success.
