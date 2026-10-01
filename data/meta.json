@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-10-01T08:01:34.189Z",
+  "tickersTotal": 56,
+  "succeeded": 54,
+  "unchanged": 0,
+  "failed": 2,
+  "tagCount": 14,
+  "failures": [
+    {
+      "ticker": "CDNS",
+      "reason": "no XBRL data for any tag (no US-GAAP/IFRS filings found)"
+    },
+    {
+      "ticker": "VLTO",
+      "reason": "no XBRL data for any tag (no US-GAAP/IFRS filings found)"
+    }
+  ]
+}
