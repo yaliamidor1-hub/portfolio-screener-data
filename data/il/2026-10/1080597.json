@@ -1,0 +1,22 @@
+{
+  "ticker": "1080597",
+  "month": "2026-10",
+  "name": "גילת טלקום גלובל",
+  "symbol": "גלטל",
+  "issuerId": "1006",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 252675,
+  "netIncomeAttributableTTM": 32985,
+  "equityAttributable": 132371,
+  "ocfTTMBeforeCapex": 80967,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1006"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "ההון קפץ ב-2026 (המרת אג\"ח?) - לבדוק"
+}

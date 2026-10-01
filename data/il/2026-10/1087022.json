@@ -1,0 +1,22 @@
+{
+  "ticker": "1087022",
+  "month": "2026-10",
+  "name": "פוקס-ויזל",
+  "symbol": "פוקס",
+  "issuerId": "1140",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 4193450,
+  "netIncomeAttributableTTM": 233709,
+  "equityAttributable": 1796814,
+  "ocfTTMBeforeCapex": 1235913,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1140"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "IFRS16: תזרים תפעולי מנופח (שכירויות במימון)"
+}

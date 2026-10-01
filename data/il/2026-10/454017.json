@@ -1,0 +1,21 @@
+{
+  "ticker": "454017",
+  "month": "2026-10",
+  "name": "קבוצת גאון",
+  "symbol": "גנקב",
+  "issuerId": "454",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 1079265,
+  "netIncomeAttributableTTM": 44075,
+  "equityAttributable": 471238,
+  "ocfTTMBeforeCapex": 102844,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/454"
+    }
+  ],
+  "retrievedAt": "2026-10-01"
+}

@@ -1,0 +1,139 @@
+{
+  "updated": "2026-10-01",
+  "note": "Israeli companies to ingest. Add a company by adding an entry here (or a row to IL_Watchlist); its data file is data/il/<YYYY-MM>/<security number>.json.",
+  "companies": [
+    {
+      "ticker": "731018",
+      "name": "מלם-תים אחזקות",
+      "symbol": "מלתא",
+      "issuerId": "731",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1171818",
+      "name": "אב-גד החזקות",
+      "symbol": "אבגד",
+      "issuerId": "1829",
+      "isFinancial": false
+    },
+    {
+      "ticker": "175018",
+      "name": "איביאי בית השקעות",
+      "symbol": "אבא",
+      "issuerId": "175",
+      "isFinancial": true
+    },
+    {
+      "ticker": "770016",
+      "name": "אקסל סולושנס גרופ",
+      "symbol": "אקסל",
+      "issuerId": "770",
+      "isFinancial": false
+    },
+    {
+      "ticker": "366013",
+      "name": "ארי נדל\"ן",
+      "symbol": "ארינ",
+      "issuerId": "366",
+      "isFinancial": false
+    },
+    {
+      "ticker": "454017",
+      "name": "קבוצת גאון",
+      "symbol": "גנקב",
+      "issuerId": "454",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1080597",
+      "name": "גילת טלקום גלובל",
+      "symbol": "גלטל",
+      "issuerId": "1006",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1184985",
+      "name": "הייפר גלובל",
+      "symbol": "היפר",
+      "issuerId": "2369",
+      "isFinancial": false
+    },
+    {
+      "ticker": "354019",
+      "name": "טלסיס",
+      "symbol": "טלסיס",
+      "issuerId": "354",
+      "isFinancial": false
+    },
+    {
+      "ticker": "127019",
+      "name": "מבטח שמיר אחזקות",
+      "symbol": "מבשמ",
+      "issuerId": "127",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1081843",
+      "name": "מיטב בית השקעות",
+      "symbol": "מיטב",
+      "issuerId": "1064",
+      "isFinancial": true
+    },
+    {
+      "ticker": "1170893",
+      "name": "מניף שירותים פיננסיים",
+      "symbol": "מניף",
+      "issuerId": "1828",
+      "isFinancial": true
+    },
+    {
+      "ticker": "338012",
+      "name": "ח.מר תעשיות",
+      "symbol": "מר",
+      "issuerId": "338",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1141969",
+      "name": "נאוויטס פטרוליום",
+      "symbol": "נאפט",
+      "issuerId": "1688",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1095785",
+      "name": "נקסטקום",
+      "symbol": "נקסט",
+      "issuerId": "1298",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1175439",
+      "name": "סופווייב מדיקל",
+      "symbol": "סופב",
+      "issuerId": "1886",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1087022",
+      "name": "פוקס-ויזל",
+      "symbol": "פוקס",
+      "issuerId": "1140",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1083955",
+      "name": "קווליטאו",
+      "symbol": "קלטו",
+      "issuerId": "1093",
+      "isFinancial": false
+    },
+    {
+      "ticker": "1082007",
+      "name": "א.נ שוהם ביזנס",
+      "symbol": "שוהם",
+      "issuerId": "1071",
+      "isFinancial": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "338012",
+  "month": "2026-10",
+  "name": "ח.מר תעשיות",
+  "symbol": "מר",
+  "issuerId": "338",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 685453,
+  "netIncomeAttributableTTM": 47709,
+  "equityAttributable": 182013,
+  "ocfTTMBeforeCapex": 119321,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/338"
+    }
+  ],
+  "retrievedAt": "2026-10-01"
+}

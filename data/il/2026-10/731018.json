@@ -1,0 +1,21 @@
+{
+  "ticker": "731018",
+  "month": "2026-10",
+  "name": "מלם-תים אחזקות",
+  "symbol": "מלתא",
+  "issuerId": "731",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 1879027,
+  "netIncomeAttributableTTM": 81211,
+  "equityAttributable": 588526,
+  "ocfTTMBeforeCapex": 75597,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/731"
+    }
+  ],
+  "retrievedAt": "2026-10-01"
+}

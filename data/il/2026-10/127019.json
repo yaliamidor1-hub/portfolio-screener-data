@@ -1,0 +1,22 @@
+{
+  "ticker": "127019",
+  "month": "2026-10",
+  "name": "מבטח שמיר אחזקות",
+  "symbol": "מבשמ",
+  "issuerId": "127",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 3798488,
+  "netIncomeAttributableTTM": 7065,
+  "equityAttributable": 1807567,
+  "ocfTTMBeforeCapex": -8857,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/127"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "חברת אחזקות; שולטת במניף"
+}

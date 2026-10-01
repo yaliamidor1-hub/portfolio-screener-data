@@ -1,0 +1,24 @@
+{
+  "ticker": "1141969",
+  "month": "2026-10",
+  "name": "נאוויטס פטרוליום",
+  "symbol": "נאפט",
+  "issuerId": "1688",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 14216511,
+  "netIncomeAttributableTTM": 898807,
+  "equityAttributable": 2562383,
+  "ocfTTMBeforeCapex": 1174853,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1688"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "דוחות ב-USD, הומרו בשער מרומז 3.063 לפי מכפילי MAYA; דוחות בדולר; נפט וגז, CAPEX כבד - FCF אמיתי דורש הדוח המלא"
+}

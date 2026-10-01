@@ -1,0 +1,21 @@
+{
+  "ticker": "770016",
+  "month": "2026-10",
+  "name": "אקסל סולושנס גרופ",
+  "symbol": "אקסל",
+  "issuerId": "770",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 360781,
+  "netIncomeAttributableTTM": -5580,
+  "equityAttributable": 186810,
+  "ocfTTMBeforeCapex": 21403,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/770"
+    }
+  ],
+  "retrievedAt": "2026-10-01"
+}

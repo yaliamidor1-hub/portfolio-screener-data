@@ -1,0 +1,22 @@
+{
+  "ticker": "1082007",
+  "month": "2026-10",
+  "name": "א.נ שוהם ביזנס",
+  "symbol": "שוהם",
+  "issuerId": "1071",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": true,
+  "reportDate": "2026-06-30",
+  "marketCap": 276630,
+  "netIncomeAttributableTTM": 41744,
+  "equityAttributable": 232874,
+  "ocfTTMBeforeCapex": 25326,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1071"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "פיננסית (אשראי חוץ בנקאי)"
+}

@@ -1,0 +1,22 @@
+{
+  "ticker": "1171818",
+  "month": "2026-10",
+  "name": "אב-גד החזקות",
+  "symbol": "אבגד",
+  "issuerId": "1829",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 237537,
+  "netIncomeAttributableTTM": 16298,
+  "equityAttributable": 139863,
+  "ocfTTMBeforeCapex": -175648,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1829"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "יזם התחדשות עירונית: תזרים תפעולי שלילי מבני"
+}

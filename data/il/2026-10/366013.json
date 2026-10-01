@@ -1,0 +1,22 @@
+{
+  "ticker": "366013",
+  "month": "2026-10",
+  "name": "ארי נדל\"ן",
+  "symbol": "ארינ",
+  "issuerId": "366",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 2466343,
+  "netIncomeAttributableTTM": 164508,
+  "equityAttributable": 1221332,
+  "ocfTTMBeforeCapex": 51654,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/366"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "נדל\"ן מניב: רווח כולל שערוכים"
+}

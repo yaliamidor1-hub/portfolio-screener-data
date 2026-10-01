@@ -1,0 +1,24 @@
+{
+  "ticker": "354019",
+  "month": "2026-10",
+  "name": "טלסיס",
+  "symbol": "טלסיס",
+  "issuerId": "354",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 3343300,
+  "netIncomeAttributableTTM": 144390,
+  "equityAttributable": 258153,
+  "ocfTTMBeforeCapex": 157089,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/354"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "דוחות ב-USD, הומרו בשער מרומז 3.063 לפי מכפילי MAYA; דוחות בדולר; דיבידנד גבוה"
+}

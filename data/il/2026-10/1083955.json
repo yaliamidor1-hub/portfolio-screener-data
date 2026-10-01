@@ -1,0 +1,24 @@
+{
+  "ticker": "1083955",
+  "month": "2026-10",
+  "name": "קווליטאו",
+  "symbol": "קלטו",
+  "issuerId": "1093",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 1749398,
+  "netIncomeAttributableTTM": 70982,
+  "equityAttributable": 448298,
+  "ocfTTMBeforeCapex": 87299,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1093"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "דוחות ב-USD, הומרו בשער מרומז 3.063 לפי מכפילי MAYA; דוחות בדולר; ההון קפץ בגיוס הון"
+}

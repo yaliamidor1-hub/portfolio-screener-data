@@ -1,0 +1,22 @@
+{
+  "ticker": "1081843",
+  "month": "2026-10",
+  "name": "מיטב בית השקעות",
+  "symbol": "מיטב",
+  "issuerId": "1064",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": true,
+  "reportDate": "2026-06-30",
+  "marketCap": 9994718,
+  "netIncomeAttributableTTM": 932000,
+  "equityAttributable": 2214000,
+  "ocfTTMBeforeCapex": -172000,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1064"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "פיננסית; רווח 2025 כולל חד-פעמי"
+}

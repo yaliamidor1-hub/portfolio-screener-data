@@ -1,0 +1,22 @@
+{
+  "ticker": "1170893",
+  "month": "2026-10",
+  "name": "מניף שירותים פיננסיים",
+  "symbol": "מניף",
+  "issuerId": "1828",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": true,
+  "reportDate": "2026-06-30",
+  "marketCap": 1345325,
+  "netIncomeAttributableTTM": 202385,
+  "equityAttributable": 730439,
+  "ocfTTMBeforeCapex": -12219,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1828"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "פיננסית (אשראי ליזמים)"
+}

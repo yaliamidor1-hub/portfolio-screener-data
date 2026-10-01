@@ -1,0 +1,22 @@
+{
+  "ticker": "175018",
+  "month": "2026-10",
+  "name": "איביאי בית השקעות",
+  "symbol": "אבא",
+  "issuerId": "175",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": true,
+  "reportDate": "2026-06-30",
+  "marketCap": 6125561,
+  "netIncomeAttributableTTM": 266120,
+  "equityAttributable": 955539,
+  "ocfTTMBeforeCapex": 544621,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/175"
+    }
+  ],
+  "retrievedAt": "2026-10-01",
+  "notes": "פיננסית"
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "1095785",
+  "month": "2026-10",
+  "name": "נקסטקום",
+  "symbol": "נקסט",
+  "issuerId": "1298",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 186646,
+  "netIncomeAttributableTTM": -1196,
+  "equityAttributable": 135192,
+  "ocfTTMBeforeCapex": 4915,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1298"
+    }
+  ],
+  "retrievedAt": "2026-10-01"
+}
