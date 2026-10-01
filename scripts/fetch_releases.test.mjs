@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, writeFile, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { pickReleases, pickExhibit, run } from './fetch_releases.mjs';
+import { pickReleases, pickExhibit, isResultsText, run } from './fetch_releases.mjs';
 
 const submissions = {
   filings: { recent: {
@@ -63,4 +63,19 @@ test('run: writes data/releases/<T>.json with the exhibit text, skips unchanged,
   r = await run({ root, email: 'x@example.invalid', log: () => {}, fetchImpl: async (url) => (url.includes('submissions') ? resp(200, sub2) : resp(500)) });
   assert.equal(r.summary.failed, 1); assert.equal(await readFile(path.join(root, 'data', 'releases', 'EXMP.json'), 'utf8'), before);
   const meta = JSON.parse(await readFile(path.join(root, 'data', 'meta.json'), 'utf8')); assert.ok(meta.releases);
+});
+
+test('pickExhibit: a company-named exhibit is found by size, never the 8-K body or viewer files', () => {
+  const idx = { directory: { item: [{ name: 'noc-8k.htm', size: '9000' }, { name: 'noc-12312025xearningsrelea.htm', size: '250000' }, { name: 'R1.htm', size: '900000' }, { name: 'x-index.htm', size: '800000' }, { name: 'a.xml', size: '1' }] } };
+  assert.equal(pickExhibit(idx, 'noc-8k.htm'), 'noc-12312025xearningsrelea.htm');
+  assert.equal(pickExhibit({ directory: { item: [{ name: 'noc-8k.htm', size: '9000' }, { name: 'tiny.htm', size: '500' }] } }, 'noc-8k.htm'), null, 'a tiny file is not a press release');
+});
+
+test('foreign filers: 6-K candidates, kept only when the text reads like a results release', () => {
+  const sub = { filings: { recent: { form: ['6-K', '20-F', '6-K', '6-K'], items: ['', '', '', ''], accessionNumber: ['a-1', 'a-2', 'a-3', 'a-4'], filingDate: ['2026-07-30', '2026-03-31', '2026-07-01', '2026-04-30'], reportDate: ['', '', '', ''], primaryDocument: ['x1.htm', 'x2.htm', 'x3.htm', 'x4.htm'] } } };
+  const c = pickReleases(sub);
+  assert.deepEqual(c.map((r) => r.accession), ['a-1', 'a-3', 'a-4']); assert.ok(c.every((r) => r.candidate));
+  assert.equal(pickReleases(submissions)[0].candidate, undefined, '8-K Item 2.02 releases are not candidates');
+  assert.equal(isResultsText('Check Point Software Reports 2026 Second Quarter Financial Results. Revenues: $745 million'), true);
+  assert.equal(isResultsText('Notice of annual general meeting of shareholders on 12 November'), false);
 });

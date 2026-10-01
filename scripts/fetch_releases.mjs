@@ -28,17 +28,37 @@ export function pickReleases(submissions, max = MAX_RELEASES) {
     if (!accession) continue;
     out.push({ accession, filingDate: r.filingDate?.[i] ?? null, reportDate: r.reportDate?.[i] || null, primaryDocument: r.primaryDocument?.[i] ?? null });
   }
+  if (out.length) return out;
+  // foreign filers (20-F / 40-F companies) report results on Form 6-K, which has no Item 2.02: take the newest few as CANDIDATES,
+  // the caller keeps only those whose text reads like a results release (isResultsText)
+  for (let i = 0; i < r.form.length && out.length < MAX_6K_CANDIDATES; i++) {
+    if (r.form[i] !== '6-K') continue;
+    const accession = r.accessionNumber?.[i];
+    if (!accession) continue;
+    out.push({ accession, filingDate: r.filingDate?.[i] ?? null, reportDate: r.reportDate?.[i] || null, primaryDocument: r.primaryDocument?.[i] ?? null, candidate: true });
+  }
   return out;
 }
 
+export const MAX_6K_CANDIDATES = 8;
+
+/** Does a document read like a quarterly / annual results release? (used for 6-K candidates only) */
+export function isResultsText(text) {
+  const head = String(text ?? '').slice(0, 4000);
+  return /(financial results|results for the|quarter|full year|fiscal year)/i.test(head) && /(revenue|net income|earnings|profit)/i.test(head) && /\d/.test(head);
+}
+
 /** The press-release exhibit (99.1 preferred) among a filing's files (index.json "directory.item"), or null. */
-export function pickExhibit(index) {
+export function pickExhibit(index, primaryDocument = null) {
   const items = index?.directory?.item;
   if (!Array.isArray(items)) return null;
-  const htm = items.map((x) => String(x?.name ?? '')).filter((n) => /\.html?$/i.test(n));
-  const rank = (n) => (/(ex|exhibit)[-_]?99[-_.]?1/i.test(n) ? 0 : /(ex|exhibit)[-_]?99/i.test(n) ? 1 : /(press|release)/i.test(n) ? 2 : 9);
-  const best = htm.filter((n) => rank(n) < 9).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))[0];
-  return best ?? null;
+  const htm = items.map((x) => ({ name: String(x?.name ?? ''), size: Number(x?.size) || 0 })).filter((x) => /\.html?$/i.test(x.name));
+  const rank = (n) => (/(ex|exhibit)[-_]?99[-_.]?1/i.test(n) ? 0 : /(ex|exhibit)[-_]?99/i.test(n) ? 1 : /(press|release|earnings)/i.test(n) ? 2 : 9);
+  const named = htm.filter((x) => rank(x.name) < 9).sort((a, b) => rank(a.name) - rank(b.name) || a.name.localeCompare(b.name))[0];
+  if (named) return named.name;
+  // exhibits named after the company ("noc-12312025xearningsrelea.htm"): the largest document that is neither the 8-K body nor an index / XBRL viewer file
+  const other = htm.filter((x) => x.name !== primaryDocument && !/^R\d+\.htm$/i.test(x.name) && !/(index|FilingSummary)/i.test(x.name)).sort((a, b) => b.size - a.size)[0];
+  return other && other.size > 3000 ? other.name : null;
 }
 
 async function readJsonIfExists(file) {
@@ -75,12 +95,14 @@ export async function run({ root, email, now = () => Date.now(), fetchImpl = fet
 
     const releases = [];
     for (const p of picks) {
+      if (releases.length >= MAX_RELEASES) break;
       const folder = `https://www.sec.gov/Archives/edgar/data/${Number(cik)}/${p.accession.replace(/-/g, '')}`;
       const idx = await getJson(`${folder}/index.json`, userAgent, fetchImpl);
-      const name = idx.status === 200 ? pickExhibit(idx.data) : null;
+      const name = idx.status === 200 ? pickExhibit(idx.data, p.primaryDocument) : null;
       if (!name) { summary.reasons.push({ ticker, reason: `${p.accession}: no exhibit 99 found` }); continue; }
       const doc = await getText(`${folder}/${name}`, userAgent, fetchImpl);
       if (doc.status !== 200 || typeof doc.data !== 'string') { summary.reasons.push({ ticker, reason: `${p.accession}: ${doc.error ?? 'HTTP ' + doc.status}` }); continue; }
+      if (p.candidate && !isResultsText(stripHtml(doc.data))) continue;   // a 6-K that is not a results release
       releases.push({ accession: p.accession, filingDate: p.filingDate, reportDate: p.reportDate, url: `${folder}/${name}`, text: stripHtml(doc.data).slice(0, RELEASE_CHARS) });
     }
     if (!releases.length) { reason(ticker, 'no release text could be read (previous file kept)', 'failed'); continue; }
