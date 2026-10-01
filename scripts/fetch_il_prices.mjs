@@ -33,7 +33,9 @@ export function parseQuote(html) {
   if (!Number.isFinite(price) || price <= 0) return { error: 'price on the page is not a positive number' };
   const d = new Date(Date.UTC(Number(m[6]), Number(m[5]) - 1, Number(m[4])));
   if (d.getUTCFullYear() !== Number(m[6]) || d.getUTCMonth() !== Number(m[5]) - 1 || d.getUTCDate() !== Number(m[4])) return { error: 'date on the page is not valid' };
-  return { name: m[1].trim(), price, change: Number(m[3].replace(/,/g, '')), date };
+  const cap = /שווי שוק\s*\(אלפי[^)]*\)\s*:?\s*([\d,]+)/.exec(text);   // thousands of ILS, as the page shows it
+  const marketCap = cap ? Number(cap[1].replace(/,/g, '')) : null;
+  return { name: m[1].trim(), price, change: Number(m[3].replace(/,/g, '')), date, marketCap: Number.isFinite(marketCap) && marketCap > 0 ? marketCap : null };
 }
 
 /** Does the page's company name share a word (>= 3 letters) with the watchlist name? */
@@ -67,7 +69,7 @@ export async function run({ root, month, now = () => Date.now(), fetchImpl = fet
         else if (Date.parse(q.date) > now() + 86_400_000) skipped.push([sn, `date ${q.date} is in the future`]);
         else {
           const old = prevBy.get(sn);
-          prices.push(old && old.priceDate > q.date ? old : { securityNumber: sn, price: q.price, priceUnit: 'agorot', priceDate: q.date, source: PRICE_URL(sn) });
+          prices.push(old && old.priceDate > q.date ? old : { securityNumber: sn, price: q.price, priceUnit: 'agorot', priceDate: q.date, source: PRICE_URL(sn), ...(q.marketCap ? { marketCap: q.marketCap } : {}) });
         }
       }
     } catch (e) { skipped.push([sn, `request failed (${e && e.name ? e.name : 'error'})`]); }

@@ -1,0 +1,547 @@
+{
+ "generatedAt": "2026-10-01T21:27:57.174Z",
+ "source": "arden 2026",
+ "count": 60,
+ "candidates": [
+  {
+   "issuerId": "156",
+   "name": "מלם תים",
+   "category": "שירותי IT",
+   "rating": "interesting",
+   "marketCapText": "1,791 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/156"
+  },
+  {
+   "issuerId": "1948",
+   "name": "טרמינל איקס",
+   "category": "רשתות שיווק",
+   "rating": "interesting",
+   "marketCapText": "900 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1948"
+  },
+  {
+   "issuerId": "1916",
+   "name": "נקסט ויז’ן",
+   "category": "חברות ביטחוניות",
+   "rating": "watch",
+   "marketCapText": "28 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1916"
+  },
+  {
+   "issuerId": "2174",
+   "name": "קמטק",
+   "category": "אלקטרוניקה ורכיבים",
+   "rating": "watch",
+   "marketCapText": "22.4 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/2174"
+  },
+  {
+   "issuerId": "1801",
+   "name": "דוראל אנרגיה",
+   "category": "יזמות סולארית ואנרגיה מתחדשת",
+   "rating": "watch",
+   "marketCapText": "12 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1801"
+  },
+  {
+   "issuerId": "1152",
+   "name": "אל-על",
+   "category": "מלונאות תעופה ותיירות",
+   "rating": "watch",
+   "marketCapText": "8 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1152"
+  },
+  {
+   "issuerId": "445",
+   "name": "מטריקס",
+   "category": "שירותי IT",
+   "rating": "watch",
+   "marketCapText": "8 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/445"
+  },
+  {
+   "issuerId": "1894",
+   "name": "נאייקס",
+   "category": "שאר המניות בישראל – א’-ת’",
+   "rating": "watch",
+   "marketCapText": "6.6 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1894"
+  },
+  {
+   "issuerId": "1300",
+   "name": "איירפורט סיטי",
+   "category": "נדל”ן מניב בישראל",
+   "rating": "watch",
+   "marketCapText": "6 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1300"
+  },
+  {
+   "issuerId": "1831",
+   "name": "נופר אנרג’י",
+   "category": "יזמות סולארית ואנרגיה מתחדשת",
+   "rating": "watch",
+   "marketCapText": "5.5 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1831"
+  },
+  {
+   "issuerId": "373",
+   "name": "אאורה",
+   "category": "התחדשות עירונית",
+   "rating": "watch",
+   "marketCapText": "5.4 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/373"
+  },
+  {
+   "issuerId": "1110",
+   "name": "חילן",
+   "category": "חברות תוכנה",
+   "rating": "watch",
+   "marketCapText": "4.5 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1110"
+  },
+  {
+   "issuerId": "209",
+   "name": "איילון חברה לביטוח",
+   "category": "חברות ביטוח",
+   "rating": "watch",
+   "marketCapText": "3.7 מיליארד",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/209"
+  },
+  {
+   "issuerId": "1616",
+   "name": "אינרום",
+   "category": "תעשייה וייצור",
+   "rating": "watch",
+   "marketCapText": "3.6 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1616"
+  },
+  {
+   "issuerId": "328",
+   "name": "פריורטק",
+   "category": "חברות החזקה מגוונות",
+   "rating": "watch",
+   "marketCapText": "3.04 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/328"
+  },
+  {
+   "issuerId": "1585",
+   "name": "קרסו מוטורס",
+   "category": "רכב ותחבורה",
+   "rating": "watch",
+   "marketCapText": "2.9 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1585"
+  },
+  {
+   "issuerId": "1858",
+   "name": "דלתא ישראל מותגים",
+   "category": "רשתות שיווק",
+   "rating": "watch",
+   "marketCapText": "2.5 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1858"
+  },
+  {
+   "issuerId": "578",
+   "name": "אפקון החזקות",
+   "category": "נדל”ן מניב בחו”ל",
+   "rating": "watch",
+   "marketCapText": "2.3 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/578"
+  },
+  {
+   "issuerId": "573",
+   "name": "לוינשטיין הנדסה וקבלנות",
+   "category": "נדל”ן מניב בישראל",
+   "rating": "watch",
+   "marketCapText": "2.2 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/573"
+  },
+  {
+   "issuerId": "1036",
+   "name": "איסתא",
+   "category": "מלונאות תעופה ותיירות",
+   "rating": "watch",
+   "marketCapText": "1.78 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1036"
+  },
+  {
+   "issuerId": "2358",
+   "name": "מור גמל ופנסיה",
+   "category": "בתי השקעות ושירותים פיננסיים",
+   "rating": "watch",
+   "marketCapText": "1.75 מיליארד",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/2358"
+  },
+  {
+   "issuerId": "1386",
+   "name": "בריינסווי",
+   "category": "ביומד ומדעי החיים",
+   "rating": "watch",
+   "marketCapText": "1.715 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1386"
+  },
+  {
+   "issuerId": "501",
+   "name": "אלקטרה מוצרי צריכה",
+   "category": "רשתות שיווק",
+   "rating": "watch",
+   "marketCapText": "1,711 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/501"
+  },
+  {
+   "issuerId": "1908",
+   "name": "ריטיילורס",
+   "category": "רשתות שיווק",
+   "rating": "watch",
+   "marketCapText": "1.63 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1908"
+  },
+  {
+   "issuerId": "1008",
+   "name": "אנליסט אי.אמ.אס.",
+   "category": "בתי השקעות ושירותים פיננסיים",
+   "rating": "watch",
+   "marketCapText": "1.54 מיליארד",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1008"
+  },
+  {
+   "issuerId": "1267",
+   "name": "קמהדע",
+   "category": "שאר המניות בישראל – א’-ת’",
+   "rating": "watch",
+   "marketCapText": "1.5 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1267"
+  },
+  {
+   "issuerId": "644",
+   "name": "פלרם",
+   "category": "תעשיית הפלסטיק",
+   "rating": "watch",
+   "marketCapText": "1.3 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/644"
+  },
+  {
+   "issuerId": "769",
+   "name": "רפק תקשורת ותשתיות",
+   "category": "יזמות סולארית ואנרגיה מתחדשת",
+   "rating": "watch",
+   "marketCapText": "1.25 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/769"
+  },
+  {
+   "issuerId": "1221",
+   "name": "פיסיבי טכנולוגיות",
+   "category": "אלקטרוניקה ורכיבים",
+   "rating": "watch",
+   "marketCapText": "1.2 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1221"
+  },
+  {
+   "issuerId": "2240",
+   "name": "פריון",
+   "category": "שאר המניות בישראל – א’-ת’",
+   "rating": "watch",
+   "marketCapText": "1.2 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/2240"
+  },
+  {
+   "issuerId": "2123",
+   "name": "ויליפוד אינטרנשיונל",
+   "category": "ייצור משקאות ומזון",
+   "rating": "watch",
+   "marketCapText": "1,120 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/2123"
+  },
+  {
+   "issuerId": "1361",
+   "name": "בית זיקוק אשדוד",
+   "category": "תעשייה וייצור",
+   "rating": "watch",
+   "marketCapText": "1.1 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1361"
+  },
+  {
+   "issuerId": "2428",
+   "name": "מיטב טרייד",
+   "category": "בתי השקעות ושירותים פיננסיים",
+   "rating": "watch",
+   "marketCapText": "1.1 מיליארד",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/2428"
+  },
+  {
+   "issuerId": "507",
+   "name": "קבוצת מיחשוב ישיר",
+   "category": "חברות נכס בודד",
+   "rating": "watch",
+   "marketCapText": "1.07 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/507"
+  },
+  {
+   "issuerId": "1083",
+   "name": "קרדן נדל”ן",
+   "category": "יזמיות קרקעות",
+   "rating": "watch",
+   "marketCapText": "1.05 מיליארד",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1083"
+  },
+  {
+   "issuerId": "1704",
+   "name": "אלמור",
+   "category": "נדל”ן מניב בחו”ל",
+   "rating": "watch",
+   "marketCapText": "930 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1704"
+  },
+  {
+   "issuerId": "312",
+   "name": "סמארט שוטר",
+   "category": "חברות ביטחוניות",
+   "rating": "watch",
+   "marketCapText": "930 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/312"
+  },
+  {
+   "issuerId": "182",
+   "name": "אדגר השקעות ופיתוח",
+   "category": "נדל”ן מניב בחו”ל",
+   "rating": "watch",
+   "marketCapText": "840 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/182"
+  },
+  {
+   "issuerId": "280",
+   "name": "קסטרו",
+   "category": "רשתות שיווק",
+   "rating": "watch",
+   "marketCapText": "840 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/280"
+  },
+  {
+   "issuerId": "1588",
+   "name": "רני צים מרכזי קניות",
+   "category": "נדל”ן מניב בישראל",
+   "rating": "watch",
+   "marketCapText": "775 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1588"
+  },
+  {
+   "issuerId": "422",
+   "name": "אס.אר אקורד",
+   "category": "אשראי חוץ בנקאי",
+   "rating": "watch",
+   "marketCapText": "760 מ׳",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/422"
+  },
+  {
+   "issuerId": "121",
+   "name": "קרדן ישראל",
+   "category": "חברות החזקה מגוונות",
+   "rating": "watch",
+   "marketCapText": "750 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/121"
+  },
+  {
+   "issuerId": "522",
+   "name": "כפרית",
+   "category": "תעשיית הפלסטיק",
+   "rating": "watch",
+   "marketCapText": "700 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/522"
+  },
+  {
+   "issuerId": "1944",
+   "name": "מכלול מימון",
+   "category": "אשראי חוץ בנקאי",
+   "rating": "watch",
+   "marketCapText": "700 מ׳",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1944"
+  },
+  {
+   "issuerId": "1460",
+   "name": "תיגבור",
+   "category": "חברות כוח אדם",
+   "rating": "watch",
+   "marketCapText": "662 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1460"
+  },
+  {
+   "issuerId": "531",
+   "name": "בוני התיכון",
+   "category": "התחדשות עירונית",
+   "rating": "watch",
+   "marketCapText": "660 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/531"
+  },
+  {
+   "issuerId": "384",
+   "name": "חמת",
+   "category": "תעשייה וייצור",
+   "rating": "watch",
+   "marketCapText": "600 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/384"
+  },
+  {
+   "issuerId": "333",
+   "name": "פנינסולה",
+   "category": "אשראי חוץ בנקאי",
+   "rating": "watch",
+   "marketCapText": "600 מ׳",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/333"
+  },
+  {
+   "issuerId": "625",
+   "name": "עלבד משואות יצחק",
+   "category": "תעשייה וייצור",
+   "rating": "watch",
+   "marketCapText": "560 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/625"
+  },
+  {
+   "issuerId": "130",
+   "name": "זנלכל",
+   "category": "ייצור משקאות ומזון",
+   "rating": "watch",
+   "marketCapText": "540 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/130"
+  },
+  {
+   "issuerId": "412",
+   "name": "פייטון",
+   "category": "אלקטרוניקה ורכיבים",
+   "rating": "watch",
+   "marketCapText": "535 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/412"
+  },
+  {
+   "issuerId": "1797",
+   "name": "רותם שני",
+   "category": "התחדשות עירונית",
+   "rating": "watch",
+   "marketCapText": "500 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1797"
+  },
+  {
+   "issuerId": "1794",
+   "name": "ריט אזורים",
+   "category": "קרנות ריט",
+   "rating": "watch",
+   "marketCapText": "490 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1794"
+  },
+  {
+   "issuerId": "1232",
+   "name": "עמיר שיווק והשקעות בחקלאות",
+   "category": "שאר המניות בישראל – א’-ת’",
+   "rating": "watch",
+   "marketCapText": "472 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1232"
+  },
+  {
+   "issuerId": "1553",
+   "name": "אלמוגים החזקות",
+   "category": "יזמיות קרקעות",
+   "rating": "watch",
+   "marketCapText": "465 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1553"
+  },
+  {
+   "issuerId": "313",
+   "name": "אספן גרופ",
+   "category": "נדל”ן מניב בחו”ל",
+   "rating": "watch",
+   "marketCapText": "440 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/313"
+  },
+  {
+   "issuerId": "1787",
+   "name": "מלרן פרוייקטים",
+   "category": "אשראי חוץ בנקאי",
+   "rating": "watch",
+   "marketCapText": "435 מ׳",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1787"
+  },
+  {
+   "issuerId": "1433",
+   "name": "מדיפאואר",
+   "category": "נדל”ן מניב בחו”ל",
+   "rating": "watch",
+   "marketCapText": "335 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1433"
+  },
+  {
+   "issuerId": "421",
+   "name": "נתנאל גרופ",
+   "category": "יזמיות קרקעות",
+   "rating": "watch",
+   "marketCapText": "330 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/421"
+  },
+  {
+   "issuerId": "1287",
+   "name": "אופל בלאנס",
+   "category": "אשראי חוץ בנקאי",
+   "rating": "watch",
+   "marketCapText": "330 מ׳",
+   "financialCategory": true,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1287"
+  }
+ ]
+}

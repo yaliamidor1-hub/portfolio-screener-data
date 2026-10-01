@@ -8,12 +8,17 @@ import { parseQuote, namesMatch, stripHtml, run, PRICE_URL } from './fetch_il_pr
 const page = (name, price, change, date) => `<html><head><title>מניית ${name} | ביזפורטל</title><script>var x = "מניית fake 1 1% נכון ל: 01/01/2000";</script></head><body><nav>מדד ת"א</nav><h1>מניית ${name} <span>${price}</span> <span>${change}%</span> <span>נכון ל: ${date}</span></h1><div>שיוך למדדים: מדד ת"א</div></body></html>`;
 
 test('parseQuote: name, price in agorot, change and date (the title and scripts are ignored)', () => {
-  assert.deepEqual(parseQuote(page('מלם-תים אחזקות', '18,050', '1.8', '01/10/2026')), { name: 'מלם-תים אחזקות', price: 18050, change: 1.8, date: '2026-10-01' });
-  assert.deepEqual(parseQuote(page('אב-גד', '1,134', '-1.31', '01/10/2026')), { name: 'אב-גד', price: 1134, change: -1.31, date: '2026-10-01' });
+  assert.deepEqual(parseQuote(page('מלם-תים אחזקות', '18,050', '1.8', '01/10/2026')), { name: 'מלם-תים אחזקות', price: 18050, change: 1.8, date: '2026-10-01', marketCap: null });
+  assert.deepEqual(parseQuote(page('אב-גד', '1,134', '-1.31', '01/10/2026')), { name: 'אב-גד', price: 1134, change: -1.31, date: '2026-10-01', marketCap: null });
   assert.equal(parseQuote(page('אקסל', '183.2', '0', '30/09/2026')).price, 183.2);
   assert.match(parseQuote('<html>nothing here</html>').error, /quote line not found/);
   assert.match(parseQuote(page('x', '0', '1', '01/10/2026')).error, /positive/);
   assert.match(parseQuote(page('x', '5', '1', '31/02/2026')).error, /date/);
+});
+
+test('parseQuote: the market cap shown on the page (thousands of ILS) is read when present', () => {
+  const html = page('גילת', '203', '0', '01/10/2026').replace('</body>', '<div>שווי שוק (אלפי &#8362) : 248,277 מכפיל רווח: 7.47</div></body>');
+  assert.equal(parseQuote(html).marketCap, 248277);
 });
 
 test('namesMatch: a shared word, or one name contained in the other; a different company does not match', () => {

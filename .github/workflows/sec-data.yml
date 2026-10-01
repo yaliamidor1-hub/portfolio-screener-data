@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Unit tests
-        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs scripts/build_facts.test.mjs scripts/fetch_releases.test.mjs scripts/make_il_prices.test.mjs scripts/fetch_il_prices.test.mjs
+        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs scripts/build_facts.test.mjs scripts/fetch_releases.test.mjs scripts/make_il_prices.test.mjs scripts/fetch_il_prices.test.mjs scripts/fetch_arden.test.mjs scripts/il_candidates.test.mjs scripts/il_carry_forward.test.mjs scripts/screener_api.test.mjs
 
       # The Apps Script `Universe` tab is the source of truth for tickers.txt (market=US rows only; IL rows are
       # never fetched from the SEC). If the call fails, tickers.txt stays as it is and a warning is logged.
@@ -74,6 +74,20 @@ jobs:
         if: always()
         continue-on-error: true
         run: node scripts/fetch_il_prices.mjs
+
+      # Keeps every watchlist company's Israeli data file alive month to month (copied forward, marked carriedForward; real files are never touched).
+      - name: Carry Israeli data files forward
+        if: always()
+        continue-on-error: true
+        run: node scripts/il_carry_forward.mjs
+
+      # Shlomi Arden's yearly review of the Israeli companies (rating + candidate source for Israeli discovery); refreshed at most weekly.
+      - name: Fetch Arden ratings and Israeli candidates
+        if: always()
+        continue-on-error: true
+        run: |
+          node scripts/fetch_arden.mjs 2026
+          node scripts/il_candidates.mjs 2026
 
       # Runs even if the fetch exited non-zero, so meta.json (with the failure reasons)
       # is published; per-ticker files are only ever written on success.
