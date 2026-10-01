@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-01T08:58:13.144Z",
-  "tickersTotal": 56,
-  "succeeded": 54,
+  "generatedAt": "2026-10-01T18:36:55.556Z",
+  "tickersTotal": 59,
+  "succeeded": 57,
   "unchanged": 54,
   "failed": 2,
   "tagCount": 14,
@@ -16,40 +16,24 @@
     }
   ],
   "filings": {
-    "generatedAt": "2026-10-01T09:01:05.877Z",
-    "tickersTotal": 56,
-    "fetched": 54,
-    "unchanged": 0,
+    "generatedAt": "2026-10-01T18:40:05.444Z",
+    "tickersTotal": 59,
+    "fetched": 3,
+    "unchanged": 54,
     "skipped": 2,
     "failed": 0,
     "reasons": [
-      {
-        "ticker": "ASML",
-        "reason": "20-F 0001628280-26-011378: sections not found: business, riskFactors, mdna, legal"
-      },
-      {
-        "ticker": "TSM",
-        "reason": "20-F 0001628280-26-025362: sections not found: business, riskFactors, mdna, legal"
-      },
-      {
-        "ticker": "TER",
-        "reason": "10-K 0001193125-26-059002: sections not found: business, riskFactors"
-      },
       {
         "ticker": "CDNS",
         "reason": "no CIK (no SEC data bundle for this ticker)"
       },
       {
-        "ticker": "CCJ",
-        "reason": "40-F 0001193125-26-116229: sections not found: business, riskFactors, mdna, legal"
-      },
-      {
-        "ticker": "CHKP",
-        "reason": "20-F 0001178913-26-001932: sections not found: business"
-      },
-      {
         "ticker": "VLTO",
         "reason": "no CIK (no SEC data bundle for this ticker)"
+      },
+      {
+        "ticker": "MSFT",
+        "reason": "10-K 0001193125-26-323660: sections not found: riskFactors"
       }
     ]
   }
