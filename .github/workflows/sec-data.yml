@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Unit tests
-        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs scripts/build_facts.test.mjs scripts/fetch_releases.test.mjs
+        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs scripts/build_facts.test.mjs scripts/fetch_releases.test.mjs scripts/make_il_prices.test.mjs
 
       # The Apps Script `Universe` tab is the source of truth for tickers.txt (market=US rows only; IL rows are
       # never fetched from the SEC). If the call fails, tickers.txt stays as it is and a warning is logged.
