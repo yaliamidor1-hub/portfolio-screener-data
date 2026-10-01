@@ -60,3 +60,14 @@ Requires Node 20+, no dependencies.
 ## Planned
 
 Possible later additions: 10-Q text, earnings-call transcripts (only if a free, permitted source exists).
+
+## Tickers: the screener's Universe is the source of truth
+
+`scripts/sync_tickers.mjs` (first step of the workflow) asks the screener's web app for the active `market=US`
+tickers of its `Universe` tab and rewrites `tickers.txt` (existing `TICKER,CIK` lines are kept). If the call fails,
+the answer is empty, or it is not a plain ticker list, `tickers.txt` is left untouched and the log shows a
+`::warning::` — the run continues with the existing list. IL tickers are never included.
+
+Repository secrets (Settings → Secrets and variables → Actions): `SCREENER_WEBAPP_URL` (the web app's `/exec` URL)
+and `TICKERS_TOKEN` (same value as the Apps Script Script Property `TICKERS_TOKEN`). Neither is ever logged. Set them
+without putting values in a chat or a file: `gh secret set TICKERS_TOKEN` (it prompts for the value) or the GitHub UI.
