@@ -56,5 +56,15 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: update SEC data"
-            git push
+            # Another commit may have landed on main meanwhile: rebase on it, then push. Up to 3 attempts, never --force.
+            for attempt in 1 2 3; do
+              if git pull --rebase origin main && git push; then
+                exit 0
+              fi
+              echo "Push attempt $attempt failed"
+              git rebase --abort 2>/dev/null || true
+              sleep $((attempt * 5))
+            done
+            echo "Push failed after 3 attempts"
+            exit 1
           fi
