@@ -11,8 +11,7 @@ data/il/<YYYY-MM>/<מספר נייר>.json        קובץ לכל חברה; ה-t
 ואם אין — החודש הקודם), מאמת, וכותב ל-`IL_Data` (עמודות הגלם בלבד) ול-`IL_Watchlist` (securityNumber, issuerId, isFinancial, symbol).
 את המדדים (pe, roe, debtToEquity, fcfYield) מחשב `IlProvider` מעמודות הגלם, בדיוק כמו נתונים שהוקלדו ידנית.
 
-**הוספת חברה בלי שינוי קוד:** שורה חדשה ב-`watchlist.json` (או שורה ב-`IL_Watchlist`) והקובץ שלה. כדי שהיא תיסרק צריך גם שורה ב-`Universe`
-(`market = IL`, עם thesis) — הקליטה מדפיסה אזהרה לחברות שאינן ב-Universe.
+**הוספת חברה בלי שינוי קוד:** שורה חדשה ב-`watchlist.json` (או שורה ב-`IL_Watchlist`) והקובץ שלה; הקליטה מוסיפה גם שורה ל-`Universe`.
 
 ## watchlist.json
 
@@ -60,6 +59,6 @@ data/il/<YYYY-MM>/<מספר נייר>.json        קובץ לכל חברה; ה-t
 * עמודות המדדים (`pe`, `roe`, `fcfYield`, `debtToEquity`) לעולם לא נכתבות על ידי הקליטה: ערך שהוקלד שם ממשיך לנצח את החישוב.
 * נתונים ישנים יותר מהשורה הקיימת (reportDate מוקדם יותר) לא דורסים אותה.
 * ב-`IL_Watchlist` הקוד ממלא רק תאים ריקים; ערך שונה שהוקלד נשאר ונרשמת אזהרה.
-* הקוד לא מוסיף שורות ל-`Universe` ולא קובע thesis.
+* ב-`Universe` הקוד מוסיף שורה (market IL, active, source `il-ingest`) לחברה שאין לה אף שורה — thesis `israel`, או `israel-financials` לפיננסיות, או ה-`thesis` שב-`watchlist.json`. שורה קיימת (גם `exclude`) לעולם לא משתנה ולא מוכפלת.
 
 הקבצים של 2026-10 נוצרו מהטיוטה `IL_Data_draft_2026-10-01.csv` בלי להוסיף נתונים: תא ריק נשאר חסר.
