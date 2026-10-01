@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Unit tests
-        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs
+        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs
 
       # The Apps Script `Universe` tab is the source of truth for tickers.txt (market=US rows only; IL rows are
       # never fetched from the SEC). If the call fails, tickers.txt stays as it is and a warning is logged.
@@ -55,25 +55,11 @@ jobs:
 
       # Runs even if the fetch exited non-zero, so meta.json (with the failure reasons)
       # is published; per-ticker files are only ever written on success.
+      # scripts/commit_data.sh: pull --rebase -X theirs (this run's data wins) up to 3 times, then fetch + reset to
+      # origin/main and re-apply this run's files on top. Never --force. (Runs never overlap: see 'concurrency' above.)
       - name: Commit changes (only if data/ or tickers.txt changed)
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data tickers.txt
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: update SEC data"
-            # Another commit may have landed on main meanwhile: rebase on it, then push. Up to 3 attempts, never --force.
-            for attempt in 1 2 3; do
-              if git pull --rebase origin main && git push; then
-                exit 0
-              fi
-              echo "Push attempt $attempt failed"
-              git rebase --abort 2>/dev/null || true
-              sleep $((attempt * 5))
-            done
-            echo "Push failed after 3 attempts"
-            exit 1
-          fi
+          bash scripts/commit_data.sh
