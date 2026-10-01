@@ -62,3 +62,19 @@ data/il/<YYYY-MM>/<מספר נייר>.json        קובץ לכל חברה; ה-t
 * ב-`Universe` הקוד מוסיף שורה (market IL, active, source `il-ingest`) לחברה שאין לה אף שורה — thesis `israel`, או `israel-financials` לפיננסיות, או ה-`thesis` שב-`watchlist.json`. שורה קיימת (גם `exclude`) לעולם לא משתנה ולא מוכפלת.
 
 הקבצים של 2026-10 נוצרו מהטיוטה `IL_Data_draft_2026-10-01.csv` בלי להוסיף נתונים: תא ריק נשאר חסר.
+
+## מחירים: prices.json
+
+```
+data/il/<YYYY-MM>/prices.json
+```
+
+```json
+{ "prices": [ { "securityNumber": "731018", "price": 1234, "priceUnit": "agorot", "priceDate": "2026-10-01", "source": "https://maya.tase.co.il/he/companies/731" } ] }
+```
+
+* `priceUnit`: `ILS` (ברירת מחדל — המחיר בשקלים) או `agorot` (כפי שמוצג ב-MAYA; הקוד מחלק ב-100 ושומר בשקלים).
+* `priceDate` חובה, `yyyy-MM-dd`, לא בעתיד ולא ישן מ-45 ימים (מחיר ישן נדחה — עדיף ריק ממחיר מיושן). `source`: כתובת https ב-`maya.tase.co.il` / `tase.co.il`.
+* מספר נייר שמופיע פעמיים — שתי השורות נדחות. מספר נייר שאין לו שורה ב-`IL_Data` / `IL_Watchlist` — נדחה.
+* `ingestIlPrices()` (נקראת בסוף `ingestIlData()`, וגם ידנית) כותבת `price` ו-`priceDate` רק לשורות ש-`ingestIlData` יצרה; שורה שהוקלדה ידנית לא נוגעים בה. מחיר חדש יותר שכבר בשורה נשמר. קליטה של קובץ נתונים בלי מחיר לא מוחקת מחיר קיים.
+* המחיר זורם: `IL_Data` ← שורת הדוח (`price`, `priceDate`) ← `History.priceAtReport` (נעול בכתיבה הראשונה) ו-`History.priceDate` (תאריך המחיר, לא תאריך הדוח הכספי). בארכיון "מחיר היום" לישראלית הוא המחיר האחרון מ-`IL_Data` עם התווית "מחיר מ-MAYA ב-DD/MM", והשינוי באחוזים מחושב מול המחיר הנעול, בשקלים משני הצדדים. בלי מחיר — "—".
