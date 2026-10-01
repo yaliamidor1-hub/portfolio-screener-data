@@ -16,10 +16,10 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 /**
- * Tags to fetch, "<taxonomy>/<TAG>". KEEP IDENTICAL to EDGAR_TAGS in the Apps Script
- * project's src/Edgar.gs (the data consumer); a test in that project compares them.
+ * Tags the Apps Script backup computation (debtToEquity, fcfYield) reads, "<taxonomy>/<TAG>".
+ * KEEP IDENTICAL to EDGAR_TAGS in the Apps Script project's src/Edgar.gs; a test there compares them.
  */
-export const TAGS = [
+export const EDGAR_TAGS = [
   'us-gaap/LongTermDebtNoncurrent',
   'us-gaap/DebtCurrent',
   'us-gaap/LongTermDebt',
@@ -36,7 +36,25 @@ export const TAGS = [
   'dei/EntityCommonStockSharesOutstanding',
 ];
 
+/**
+ * Extra tags for the multi-year facts files (scripts/build_facts.mjs -> data/facts/<TICKER>.json): revenue, profit,
+ * operating income, gross profit, cash. Apps Script does not read these; the reviews and the verification do.
+ */
+export const FACTS_TAGS = [
+  'us-gaap/Revenues',
+  'us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax',
+  'us-gaap/SalesRevenueNet',
+  'us-gaap/NetIncomeLoss',
+  'us-gaap/OperatingIncomeLoss',
+  'us-gaap/GrossProfit',
+  'us-gaap/CashAndCashEquivalentsAtCarryingValue',
+  'ifrs-full/Revenue',
+  'ifrs-full/ProfitLoss',
+];
+export const TAGS = [...EDGAR_TAGS, ...FACTS_TAGS];
+
 export const KEEP_PERIODS = 12;            // most recent distinct period ends kept per tag
+export const KEEP_ANNUAL = 6;              // ... plus the ends of the most recent annual (full-year) facts
 export const MIN_INTERVAL_MS = 220;        // <= ~4.5 requests/second (SEC allows 10)
 export const MAX_ATTEMPTS = 4;             // per request, on 429 / 5xx / network errors
 export const REFRESH_AFTER_DAYS = 3;       // rewrite an unchanged bundle at least this often
@@ -83,6 +101,9 @@ export function trimConcept(concept, keep = KEEP_PERIODS) {
     const ok = list.filter((e) => e && e.end && typeof e.val === 'number' && Number.isFinite(e.val) && ALLOWED_FORMS.has(e.form));
     const ends = [...new Set(ok.map((e) => e.end))].sort().reverse().slice(0, keep);
     const keepEnds = new Set(ends);
+    // full-year facts of annual filings: the quarters crowd the latest 12 ends, so older fiscal years would be lost
+    const annualEnds = [...new Set(ok.filter((e) => isAnnualFact(e)).map((e) => e.end))].sort().reverse().slice(0, KEEP_ANNUAL);
+    annualEnds.forEach((e) => keepEnds.add(e));
     const slim = ok
       .filter((e) => keepEnds.has(e.end))
       .map((e) => (e.start ? { start: e.start, end: e.end, val: e.val, form: e.form, filed: e.filed } : { end: e.end, val: e.val, form: e.form, filed: e.filed }))
@@ -91,6 +112,13 @@ export function trimConcept(concept, keep = KEEP_PERIODS) {
   }
   if (!Object.keys(units).length) return null;
   return { taxonomy: concept.taxonomy, tag: concept.tag, units };
+}
+
+/** A duration fact of about a year reported in an annual filing (10-K / 20-F / 40-F). */
+export function isAnnualFact(e) {
+  if (!e || !e.start || !e.end || !/^(10-K|20-F|40-F)/.test(String(e.form))) return false;
+  const days = (Date.parse(e.end) - Date.parse(e.start)) / 86_400_000;
+  return days >= 340 && days <= 390;
 }
 
 /** Pad a CIK to the 10 digits SEC's URLs use. */

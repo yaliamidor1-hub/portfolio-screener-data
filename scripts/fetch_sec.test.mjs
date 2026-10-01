@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { TAGS, trimConcept, parseTickers, normalizeTicker, canKeepBundle, cik10, getJson, run, KEEP_PERIODS } from './fetch_sec.mjs';
+import { TAGS, EDGAR_TAGS, FACTS_TAGS, isAnnualFact, trimConcept, parseTickers, normalizeTicker, canKeepBundle, cik10, getJson, run, KEEP_PERIODS } from './fetch_sec.mjs';
 
 const E = 'tester@example.invalid';
 const day = (n) => new Date(Date.UTC(2026, 0, 1) + n * 86_400_000).toISOString().slice(0, 10);
@@ -150,3 +150,26 @@ test('run: ticker list download failure -> meta only, exit 1', async () => {
   assert.equal(exitCode, 1); assert.match(meta.error, /company_tickers/);
   assert.deepEqual(await readdir(path.join(root, 'data')), ['meta.json']);
 }, { timeout: 60000 });
+
+test('trimConcept also keeps the latest annual facts, even when quarters crowd the 12 latest ends', () => {
+  const list = [];
+  for (let y = 2018; y <= 2025; y++) list.push({ start: y + '-01-01', end: y + '-12-31', val: y, form: '10-K', filed: (y + 1) + '-02-01' });
+  for (let i = 0; i < 14; i++) { const end = new Date(Date.UTC(2023, 0, 1) + i * 91 * 86_400_000).toISOString().slice(0, 10); list.push({ start: end, end, val: 1, form: '10-Q', filed: '2026-01-01' }); }
+  const out = trimConcept({ taxonomy: 'us-gaap', tag: 'Revenues', units: { USD: list } });
+  const annual = out.units.USD.filter((e) => e.form === '10-K').map((e) => e.end);
+  assert.ok(annual.includes('2020-12-31') && annual.includes('2025-12-31') && annual.length === 6, 'six latest fiscal years kept: ' + annual);
+  assert.ok(!annual.includes('2019-12-31'));
+});
+
+test('isAnnualFact: a year-long duration from an annual filing only', () => {
+  assert.equal(isAnnualFact({ start: '2025-01-01', end: '2025-12-31', form: '10-K' }), true);
+  assert.equal(isAnnualFact({ start: '2025-04-01', end: '2025-06-30', form: '10-K' }), false);
+  assert.equal(isAnnualFact({ start: '2025-01-01', end: '2025-12-31', form: '10-Q' }), false);
+  assert.equal(isAnnualFact({ end: '2025-12-31', form: '10-K' }), false);
+  assert.equal(isAnnualFact({ start: '2024-04-01', end: '2025-03-31', form: '20-F/A' }), true);
+});
+
+test('TAGS = the Apps Script tags + the facts tags, no duplicates', () => {
+  assert.deepEqual(TAGS, [...EDGAR_TAGS, ...FACTS_TAGS]);
+  assert.equal(new Set(TAGS).size, TAGS.length);
+});

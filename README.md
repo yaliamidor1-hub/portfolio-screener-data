@@ -71,3 +71,12 @@ the answer is empty, or it is not a plain ticker list, `tickers.txt` is left unt
 Repository secrets (Settings → Secrets and variables → Actions): `SCREENER_WEBAPP_URL` (the web app's `/exec` URL)
 and `TICKERS_TOKEN` (same value as the Apps Script Script Property `TICKERS_TOKEN`). Neither is ever logged. Set them
 without putting values in a chat or a file: `gh secret set TICKERS_TOKEN` (it prompts for the value) or the GitHub UI.
+
+## Facts and earnings releases (for Stage 2 and its verification)
+
+| File | Content |
+|---|---|
+| `data/facts/<TICKER>.json` | up to 6 fiscal years: revenue, grossProfit, operatingIncome, netIncome, operatingCashFlow, capex, freeCashFlow, cash, longTermDebt, shortTermDebt, equity + growth, margins, cashConversion. Built offline by `scripts/build_facts.mjs` from the XBRL bundles; a missing value is `null` |
+| `data/releases/<TICKER>.json` | `{ ticker, generatedAt, releases: [{ accession, filingDate, reportDate, url, text }] }` — the latest two earnings releases (8-K Item 2.02, exhibit 99) as plain text, by `scripts/fetch_releases.mjs` |
+
+Schemas of the files Claude writes (`data/reports/`, `data/discovery/`) are in `docs/`.

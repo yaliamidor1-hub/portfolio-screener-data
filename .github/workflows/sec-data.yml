@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Unit tests
-        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs
+        run: node --test scripts/fetch_sec.test.mjs scripts/fetch_filings.test.mjs scripts/sync_tickers.test.mjs scripts/commit_data.test.mjs scripts/build_facts.test.mjs scripts/fetch_releases.test.mjs
 
       # The Apps Script `Universe` tab is the source of truth for tickers.txt (market=US rows only; IL rows are
       # never fetched from the SEC). If the call fails, tickers.txt stays as it is and a warning is logged.
@@ -44,6 +44,13 @@ jobs:
           SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
         run: node scripts/fetch_sec.mjs
 
+      # Multi-year facts (revenue, profit, cash flow, debt, margins) computed offline from the XBRL bundles above:
+      # data/facts/<TICKER>.json. No network, no secrets; a failure here never blocks the commit.
+      - name: Build multi-year facts
+        if: always()
+        continue-on-error: true
+        run: node scripts/build_facts.mjs
+
       # Latest 10-K / 20-F text sections for Stage 2. One submissions call per ticker per day;
       # the document is downloaded only when the accession changed. Runs even if the step
       # above failed (it reuses the CIKs from existing data/<TICKER>.json files).
@@ -52,6 +59,14 @@ jobs:
         env:
           SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
         run: node scripts/fetch_filings.mjs
+
+      # Earnings-release text (8-K Item 2.02, exhibit 99) so the Apps Script verification can check numbers quoted from them.
+      - name: Fetch latest earnings releases
+        if: always()
+        continue-on-error: true
+        env:
+          SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+        run: node scripts/fetch_releases.mjs
 
       # Runs even if the fetch exited non-zero, so meta.json (with the failure reasons)
       # is published; per-ticker files are only ever written on success.

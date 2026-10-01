@@ -14,14 +14,31 @@
       "thesis": "defense-security",
       "securityNumber": "",
       "issuerId": "",
-      "stage1": { "roe": 0.25, "pe": 15.2, "fcfYield": 0.05, "debtToEquity": 0.8, "detail": "pe best 10%" },
-      "marketCap": { "usdMillions": 12500, "text": "$12.5B" },
-      "price": { "value": 100.5, "currency": "USD", "symbol": "$", "text": "$100.50" },
+      "stage1": {
+        "roe": 0.25,
+        "pe": 15.2,
+        "fcfYield": 0.05,
+        "debtToEquity": 0.8,
+        "detail": "pe best 10%"
+      },
+      "marketCap": {
+        "usdMillions": 12500,
+        "text": "$12.5B"
+      },
+      "price": {
+        "value": 100.5,
+        "currency": "USD",
+        "symbol": "$",
+        "text": "$100.50"
+      },
       "filing": {
-        "form": "10-K", "accession": "0000-26-4", "filingDate": "2026-02-04",
+        "form": "10-K",
+        "accession": "0000-26-4",
+        "filingDate": "2026-02-04",
         "sourceUrl": "https://example.com/filings/exmp-10k-2026.htm",
         "bridgeUrl": "https://raw.githubusercontent.com/someuser/portfolio-screener-data/main/data/filings/EXMP.json"
       },
+      "factsUrl": "https://raw.githubusercontent.com/someuser/portfolio-screener-data/main/data/facts/EXMP.json",
       "reportPath": "data/reports/2026-10/EXMP.json",
       "requestedAt": "2026-10-01T05:10:00.000Z"
     },
@@ -35,10 +52,25 @@
       "thesis": "defense-security",
       "securityNumber": "1000001",
       "issuerId": "520000001",
-      "stage1": { "roe": 0.18, "pe": 12.0, "fcfYield": 0.06, "debtToEquity": 0.5, "detail": "" },
-      "marketCap": { "usdMillions": null, "text": "לא נמצא מידע" },
-      "price": { "value": 55.0, "currency": "ILS", "symbol": "₪", "text": "₪55.00" },
+      "stage1": {
+        "roe": 0.18,
+        "pe": 12,
+        "fcfYield": 0.06,
+        "debtToEquity": 0.5,
+        "detail": ""
+      },
+      "marketCap": {
+        "usdMillions": null,
+        "text": "לא נמצא מידע"
+      },
+      "price": {
+        "value": 55,
+        "currency": "ILS",
+        "symbol": "₪",
+        "text": "₪55.00"
+      },
       "filing": null,
+      "factsUrl": "",
       "reportPath": "data/reports/2026-10/ELBX.json",
       "requestedAt": "2026-10-01T05:10:00.000Z"
     }
