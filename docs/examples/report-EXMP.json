@@ -1,0 +1,28 @@
+{
+  "ticker": "EXMP",
+  "month": "2026-10",
+  "model": "claude-example-model",
+  "generatedAt": "2026-10-02T09:30:00Z",
+  "verdict": "watch",
+  "verdictReason": "מדדים כמותיים טובים, אבל הרווח תלוי בחוזה אחד גדול. כדאי לעקוב אחרי המשך החוזה [S3].",
+  "business": "EXAMPLE Aerospace מייצרת רכיבי מנועים לחברות תעופה וביטחון [S2]. ההכנסות מגיעות בעיקר מחוזי אספקה רב-שנתיים עם מספר לקוחות מרכזיים [S2].",
+  "segments": [
+    { "name": "Engine Components", "share": "60% מההכנסות", "trend": "צמיחה מתונה בשנה האחרונה", "source": "S2" },
+    { "name": "Defense Systems", "share": "40% מההכנסות", "trend": "צמיחה מהירה יותר, בעקבות החוזה החדש", "source": "S3" }
+  ],
+  "events": [
+    { "date": "2026-02-04", "text": "הדוח השנתי לשנת 2025 הוגש", "source": "S2" },
+    { "date": "2026-09-21", "text": "נחתם חוזה אספקה רב-שנתי חדש עם לקוח ביטחוני", "source": "S3" }
+  ],
+  "financials": "ה-ROE עומד על **25.0%**, החוב להון על **0.80** ותשואת ה-FCF על **5.0%** [S1]. נראה שהמינוף נמוך יחסית לתחום (הערכה).",
+  "risks": [
+    { "text": "תלות בלקוח ביטחוני אחד מרכזי [S2]", "source": "S2" },
+    { "text": "חשיפה למחירי חומרי גלם. זו הערכה שלי ללא מקור (הערכה)" }
+  ],
+  "thesis": "אם החוזה החדש יתממש במלואו, יש פוטנציאל לצמיחה ברווחיות ב-2-3 השנים הקרובות [S3].",
+  "sources": [
+    { "id": "S1", "title": "נתוני הסינון הכמותי (Stage 1) של EXMP", "label": "נתוני Stage 1", "kind": "metrics" },
+    { "id": "S2", "title": "EXMP 10-K (04/02/2026) - פריט 1 - תיאור העסק", "label": "10-K 04/02/2026", "kind": "filing", "url": "https://example.com/filings/exmp-10k-2026.htm", "date": "2026-02-04" },
+    { "id": "S3", "title": "Example Wire, 21/09/2026: EXMP signs multi-year supply contract", "label": "Example Wire 21/09/2026", "kind": "news", "url": "https://example.com/news/exmp-contract", "date": "2026-09-21" }
+  ]
+}

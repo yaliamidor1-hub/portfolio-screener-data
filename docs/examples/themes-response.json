@@ -1,0 +1,20 @@
+{
+  "month": "2026-10",
+  "generatedAt": "2026-10-22T03:00:00.000Z",
+  "themes": [
+    {
+      "theme": "defense-security",
+      "description": "Defense primes and suppliers, munitions, drones and security technology",
+      "market": "US",
+      "maxCandidates": 12,
+      "due": true,
+      "why": "",
+      "filePath": "data/discovery/2026-10/defense-security.json"
+    }
+  ],
+  "universe": [
+    { "ticker": "NOC", "market": "US", "thesis": "defense-security", "active": true, "source": "", "exclude": false },
+    { "ticker": "CYBR", "market": "US", "thesis": "cybersecurity", "active": true, "source": "auto:cybersecurity", "exclude": true },
+    { "ticker": "ESLT", "market": "IL", "thesis": "defense-security", "active": true, "source": "", "exclude": false }
+  ]
+}

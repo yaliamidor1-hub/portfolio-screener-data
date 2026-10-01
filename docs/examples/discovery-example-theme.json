@@ -1,0 +1,26 @@
+[
+  {
+    "ticker": "EXMP",
+    "name": "Example Aerospace Corp",
+    "why": "מייצרת רכיבי מנועים לתעופה וביטחון - עיקר הפעילות בתחום.",
+    "sources": ["https://example.com/profile/exmp", { "url": "https://example.com/filings/exmp-10k-2026.htm", "title": "EXMP 10-K 2026" }]
+  },
+  {
+    "ticker": "DEMO",
+    "name": "Demo Defense Inc",
+    "why": "ספקית מערכות הגנה; הפעילות בתחום היא חלק משמעותי מההכנסות.",
+    "sources": ["https://example.com/profile/demo"]
+  },
+  {
+    "ticker": "GONE",
+    "name": "Gone Systems Corp",
+    "why": "חברה שנרכשה והוסרה מהמסחר - הדוגמה מראה שהקוד דוחה אותה.",
+    "sources": ["https://example.com/profile/gone"]
+  },
+  {
+    "ticker": "NOSRC",
+    "name": "No Source Ltd",
+    "why": "מועמדת בלי מקור - הקוד דוחה אותה.",
+    "sources": []
+  }
+]
