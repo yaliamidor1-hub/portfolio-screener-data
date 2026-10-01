@@ -74,7 +74,8 @@ data/il/<YYYY-MM>/prices.json
 ```
 
 * `priceUnit`: `ILS` (ברירת מחדל — המחיר בשקלים) או `agorot` (כפי שמוצג ב-MAYA; הקוד מחלק ב-100 ושומר בשקלים).
-* `priceDate` חובה, `yyyy-MM-dd`, לא בעתיד ולא ישן מ-45 ימים (מחיר ישן נדחה — עדיף ריק ממחיר מיושן). `source`: כתובת https ב-`maya.tase.co.il` / `tase.co.il`.
+* `priceDate` חובה, `yyyy-MM-dd`, לא בעתיד ולא ישן מ-45 ימים (מחיר ישן נדחה — עדיף ריק ממחיר מיושן). `source`: כתובת https ב-`maya.tase.co.il` / `tase.co.il`, או במקור מחירים מורשה (`CONFIG.IL_PRICE_SOURCE_HOSTS`, כרגע `bizportal.co.il`). קובצי הנתונים הפיננסיים עדיין דורשים MAYA / TASE.
+* **איך המחירים נאספים:** MAYA ו-TASE מוגנות בהגנת בוטים ונטענות ב-JavaScript, ולכן סקריפט לא יכול לקרוא אותן. `scripts/fetch_il_prices.mjs` (צעד יומי ב-workflow, אופציונלי) קורא את אותו שער TASE מ-Bizportal (`https://www.bizportal.co.il/capitalmarket/quote/generalpage/<מספר נייר>`, HTML רגיל לפי מספר הנייר), בודק ששם החברה בעמוד תואם לרשימה, והמקור שנרשם הוא כתובת Bizportal — לא מוצג כ-MAYA. הכלי `make_il_prices.mjs` ו-`il-prices-task.md` נשארים כאפשרות ידנית.
 * מספר נייר שמופיע פעמיים — שתי השורות נדחות. מספר נייר שאין לו שורה ב-`IL_Data` / `IL_Watchlist` — נדחה.
 * `ingestIlPrices()` (נקראת בסוף `ingestIlData()`, וגם ידנית) כותבת `price` ו-`priceDate` רק לשורות ש-`ingestIlData` יצרה; שורה שהוקלדה ידנית לא נוגעים בה. מחיר חדש יותר שכבר בשורה נשמר. קליטה של קובץ נתונים בלי מחיר לא מוחקת מחיר קיים.
-* המחיר זורם: `IL_Data` ← שורת הדוח (`price`, `priceDate`) ← `History.priceAtReport` (נעול בכתיבה הראשונה) ו-`History.priceDate` (תאריך המחיר, לא תאריך הדוח הכספי). בארכיון "מחיר היום" לישראלית הוא המחיר האחרון מ-`IL_Data` עם התווית "מחיר מ-MAYA ב-DD/MM", והשינוי באחוזים מחושב מול המחיר הנעול, בשקלים משני הצדדים. בלי מחיר — "—".
+* המחיר זורם: `IL_Data` ← שורת הדוח (`price`, `priceDate`) ← `History.priceAtReport` (נעול בכתיבה הראשונה) ו-`History.priceDate` (תאריך המחיר, לא תאריך הדוח הכספי). בארכיון "מחיר היום" לישראלית הוא המחיר האחרון מ-`IL_Data` (העמודה `priceSource` נרשמת איתו) עם התווית "מחיר מ-Bizportal ב-DD/MM" (או MAYA), והשינוי באחוזים מחושב מול המחיר הנעול, בשקלים משני הצדדים. בלי מחיר — "—".
