@@ -21,6 +21,11 @@ Working copy: `C:\Users\yalia\portfolio-screener-data` (a git clone; `git push` 
 * **Delete the PDF and everything else in `.work/tmp/` right after the extraction — also when it failed — and clean `.work/tmp/` at the end of every run** (the owner does not want the disk filled).
 * Before using a report, check the reports list for an amended report ("תיקון דוח ...") of the same period: if there is one, use its numbers or note the doubt.
 
+## What makes a review pass the verification (learned in October)
+* The code re-reads the cited sources and looks for every number of a sentence in them. **Do not quote numbers that change daily** — price, market cap, P/E, a stock's % return over 12 months, "52-week range": they are in the header / `S1` at queue time and a live page shows another value days later (that is how all seven Israeli reviews became low-confidence). Quote reported figures instead (quarterly revenue, net profit, equity, debt, cash flow, backlog) with the report they came from.
+* Write the review **after** the queue was built (day 1, after the 07:00 scan): the `S1` numbers (ROE, P/E, market cap, debt, FCF) are those of the queue package; a review written earlier quotes outdated numbers.
+* If the package now has `totalDebt` / `fcfTTM` (not null), use them; do not say they are missing.
+
 ## Hard rules (the whole project stands on them)
 1. **Never fabricate.** An unknown value is `null` / `"לא נמצא מידע"`, never 0 and never a guess. A claim without a source gets `(הערכה)`.
 2. Numbers come from the sources you actually read in this run (MAYA, Bizportal, the SEC bridge files in `data/`), not from memory.
@@ -62,7 +67,7 @@ If a phase is already complete, stop immediately and say so in one line.
    * `invalid` → fix exactly what `reason` says (rewrite the file, push, call `finalize` again). Do not argue with the validator; if a reason looks like a validator bug, write it to `.work/problem.txt`.
    * `emailed: true` means the monthly e-mail (TOP 10 with full reviews) went out → the month is done. Stop.
    * `pending` not empty and nothing left to write → the files are in the queue but rejected twice: leave them, note them in `.work/problem.txt`. The script e-mails the owner by itself (an alert from day 3, the report in any case on day 7).
-4. Check `status` first: reviews already `done` are not rewritten. Do not write reviews for stocks that are not in the queue, and never edit the Apps Script.
+4. Check `status` first: reviews already `done` are not rewritten — **except those whose `note` says `low-confidence`**: the note lists why (numbers that were not found in the cited sources, a dead page). Rewrite such a file once: every number must appear in the cited source exactly as written (a computed number such as 100%-56% is flagged — avoid it or give the two inputs instead), remove or fix what the note lists, push, and the Apps Script checks it again by itself. The e-mail waits for these until day 7. Do not write reviews for stocks that are not in the queue, and never edit the Apps Script.
 
 ## Phase B — prepare next month (days 18–31): Israeli data
 The GitHub workflow already copies every watchlist company's latest data file into `data/il/N/` (`carriedForward: true`) and refreshes prices and market caps from Bizportal.
