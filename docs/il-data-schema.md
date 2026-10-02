@@ -45,6 +45,8 @@ data/il/<YYYY-MM>/<מספר נייר>.json        קובץ לכל חברה; ה-t
 | `marketCap`, `netIncomeAttributableTTM`, `equityAttributable` | כן | מספרים (לא מחרוזות), באלפים. `netIncomeAttributableTTM` ו-`equityAttributable` — מיוחסים לבעלי המניות של החברה האם (בלי מיעוט) |
 | `totalDebt`, `fcfTTM` | לא | חסר = `null` או בלי השדה, אף פעם לא `0`. `totalDebt` לא שלילי |
 | `ocfTTMBeforeCapex` | לא | מידע בלבד (נרשם ב-notes; אינו FCF) |
+
+**הגדרות קבועות:** `totalDebt` = הלוואות בנקאיות + אג"ח (כולל להמרה, כולל חלויות שוטפות) + התחייבויות חכירה לפי IFRS 16 (שוטפות ולא שוטפות), ברוטו (בלי ניכוי מזומן). `fcfTTM` = תזרים מפעילות שוטפת TTM − capex TTM (רכוש קבוע + נכסים בלתי מוחשיים) − תשלומי קרן חכירה TTM. TTM = שנה קודמת + תקופה נוכחית − אותה תקופה אשתקד. הרכיבים ומספרי העמודים נרשמים ב-`notes`; רכיב חסר = שני השדות `null`.
 | `price`, `priceUnit`, `priceDate` | לא | מחיר: `priceUnit` (`agorot` — המחיר ב-MAYA, מחולק ב-100 — או `ILS`) ו-`priceDate` חובה |
 | `source` | כן | רשימה; לפחות כתובת `https` אחת ב-`maya.tase.co.il` או `tase.co.il`, וכל הכתובות `https` |
 
