@@ -11,6 +11,12 @@ Working copy: `C:\Users\yalia\portfolio-screener-data` (a git clone; `git push` 
 * Your sandbox reaches only the allowed domains (GitHub, script.google.com, script.googleusercontent.com, maya.tase.co.il, tase.co.il, bizportal.co.il, israeli-stocks-site.vercel.app). **Run every `node scripts/...` command with `NODE_USE_ENV_PROXY=1`** (e.g. `NODE_USE_ENV_PROXY=1 node scripts/screener_api.mjs status`), otherwise Node's fetch fails with "fetch failed" even though the network is open.
 * If a page of MAYA / Bizportal cannot be fetched from the sandbox, open it in the browser (Claude in Chrome); never skip a company silently — write what could not be read to `.work/problem.txt`.
 
+## MAYA reports (verified in the first test)
+* MAYA's company page loads in Chrome without a block. `get_page_text` may be empty: read the summary table with the accessibility tree (`read_page`). The summary table gives revenue, net profit attributable to shareholders, equity and operating cash flow for the period, the same period last year and the last year; TTM = last year + current period - same period last year.
+* **Debt and capex are not in the summary**: they are in the report PDF (`mayafiles.tase.co.il/rpdf/...`, linked from the report page). Download it in the sandbox (`curl` / node, with `NODE_USE_ENV_PROXY=1`) into `.work/tmp/`, extract the text (`pdftotext`, else python pypdf / pdfplumber), and read the loans / bonds / lease liabilities and the capex line (purchase of property, plant and equipment, and intangibles if the company counts them) from the balance sheet and cash-flow statement. Quote the page number in `notes`. Do NOT page through the PDF in Chrome's viewer and do not guess from screenshots: if the text cannot be extracted, leave `totalDebt` / `fcfTTM` null.
+* **Delete the PDF and everything else in `.work/tmp/` right after the extraction — also when it failed — and clean `.work/tmp/` at the end of every run** (the owner does not want the disk filled).
+* Before using a report, check the reports list for an amended report ("תיקון דוח ...") of the same period: if there is one, use its numbers or note the doubt.
+
 ## Hard rules (the whole project stands on them)
 1. **Never fabricate.** An unknown value is `null` / `"לא נמצא מידע"`, never 0 and never a guess. A claim without a source gets `(הערכה)`.
 2. Numbers come from the sources you actually read in this run (MAYA, Bizportal, the SEC bridge files in `data/`), not from memory.
