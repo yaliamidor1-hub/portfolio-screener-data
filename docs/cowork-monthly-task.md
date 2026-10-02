@@ -9,7 +9,11 @@ Working copy: `C:\Users\yalia\portfolio-screener-data` (a git clone; `git push` 
 
 ## Environment notes (learned in the first run)
 * Your sandbox reaches only the allowed domains (GitHub, script.google.com, script.googleusercontent.com, maya.tase.co.il, tase.co.il, bizportal.co.il, israeli-stocks-site.vercel.app). **Run every `node scripts/...` command with `NODE_USE_ENV_PROXY=1`** (e.g. `NODE_USE_ENV_PROXY=1 node scripts/screener_api.mjs status`), otherwise Node's fetch fails with "fetch failed" even though the network is open.
+* A `.git/index.lock` the sandbox cannot remove ("Operation not permitted") is normal: the owner's Windows push task removes stale locks every 30 minutes. If your commit is blocked by a lock, leave the file written, say so in the report, and let the next run commit it (`git add -A; git commit`). Never loop on it.
 * If a page of MAYA / Bizportal cannot be fetched from the sandbox, open it in the browser (Claude in Chrome); never skip a company silently — write what could not be read to `.work/problem.txt`.
+
+## Unattended runs: you ARE allowed (and expected) to use Chrome
+This task is scheduled and runs without the owner. The owner has approved automatic use of the browser (Claude in Chrome) for it: MAYA must be read in Chrome (the API answers 403 to the sandbox, the pages load fine in the browser). Do not skip MAYA work because the run is unattended. Procedure: open the company / report page in Chrome, read the report id and the PDF link (`mayafiles.tase.co.il/rpdf/...`), then download the PDF in the sandbox and extract the text as described below.
 
 ## MAYA reports (verified in the first test)
 * MAYA's company page loads in Chrome without a block. `get_page_text` may be empty: read the summary table with the accessibility tree (`read_page`). The summary table gives revenue, net profit attributable to shareholders, equity and operating cash flow for the period, the same period last year and the last year; TTM = last year + current period - same period last year.
