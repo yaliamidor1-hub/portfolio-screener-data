@@ -10,11 +10,12 @@
 | 28 ו-1 (06:00) | Apps Script | קליטת קובצי הנתונים הישראליים לגיליון (עם אימות) |
 | 1 לחודש 07:00 | Apps Script | סינון כמותי (שלב 1) ובניית התור לסקירות |
 | 1–7 לחודש | **משימת Cowork** | כתיבת הסקירות; קריאה ל-`finalize` שמאמת ושולח את המייל כשהכול מוכן |
-| 2–7 לחודש 08:00 | Apps Script | גיבוי: מאמת סקירות שהגיעו; התראה אחת ביום מהיום ה-3 אם משהו חסר; מייל גם אם חסר משהו ביום ה-7 |
+| 2–14 לחודש, כל שעתיים | Apps Script | מאמת סקירות שהגיעו ל-GitHub ושולח את המייל ברגע שהכול מוכן; התראה אחת ביום מהיום ה-3 אם משהו חסר; מייל גם אם חסר משהו ביום ה-7 |
+| כל 30 דקות | משימת Windows `PortfolioScreenerPush` | דוחפת ל-GitHub את מה ש-Cowork שמר מקומית (בסנדבוקס שלו אין הרשאת כתיבה ל-GitHub) |
 
 ## צעדים (בסדר הזה)
 1. **פריסה:** ב-Apps Script: Deploy → Manage deployments → ✏️ (עריכה) → Version: **New version** → Deploy. (הקוד כבר נדחף עם `clasp push`; בלי גרסה חדשה ה-Web App לא מכיר את `?finalize` / `?status`.)
-2. **טריגרים:** בעורך הרץ פעם אחת את `installTriggers()` (17 טריגרים; הוא מחליף את הקיימים).
+2. **טריגרים:** בעורך הרץ פעם אחת את `installTriggers()` (12 טריגרים; הוא מחליף את הקיימים, כולל `finalizeTick` כל שעתיים).
 3. **Script Properties** (Project Settings → Script properties): `TICKERS_TOKEN` (מחרוזת אקראית של 24 תווים ויותר; אם כבר קיים — השאר), `GITHUB_DATA_BASE_URL` (`https://raw.githubusercontent.com/yaliamidor1-hub/portfolio-screener-data/main/data`), `REPORT_EMAILS` (הכתובות שיקבלו את המייל). `STAGE2_SOURCE` אינו נדרש (ברירת המחדל `claude`).
 4. **קובץ הגדרות מקומי** (המחשב שבו רץ Cowork): ליצור `C:\Users\yalia\portfolio-screener-data\.env` (הקובץ ב-.gitignore ולא עולה ל-GitHub) עם שתי שורות:
    ```

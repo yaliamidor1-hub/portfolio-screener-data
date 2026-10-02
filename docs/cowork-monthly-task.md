@@ -16,6 +16,7 @@ Working copy: `C:\Users\yalia\portfolio-screener-data` (a git clone; `git push` 
 * **Debt and capex are not in the summary**: they are in the report PDF (`mayafiles.tase.co.il/rpdf/...`, linked from the report page). Download it in the sandbox (`curl` / node, with `NODE_USE_ENV_PROXY=1`) into `.work/tmp/`, extract the text (`pdftotext`, else python pypdf / pdfplumber), and read the loans / bonds / lease liabilities and the capex line (purchase of property, plant and equipment, and intangibles if the company counts them) from the balance sheet and cash-flow statement. Quote the page number in `notes`. Do NOT page through the PDF in Chrome's viewer and do not guess from screenshots: if the text cannot be extracted, leave `totalDebt` / `fcfTTM` null.
 * **Definitions (fixed, so that every company is comparable):** `totalDebt` = bank loans + bonds (including convertibles and current portions) + IFRS-16 lease liabilities (current + non-current), gross (cash is NOT netted); `fcfTTM` = operating cash flow TTM − capex TTM (purchase of property/plant/equipment + intangibles) − principal lease payments TTM (they sit in financing under IFRS 16). TTM = last year + current period − same period last year. Write the components and the page numbers in `notes` (example: "totalDebt = bonds 26,513 + leases 33,116 (PDF p.31); fcf = OCF 80,967 − capex 10,159 − lease principal 28,590"). A missing component → leave both fields null rather than a partial sum.
 * The original report PDF may contain only the directors' report and the separate (company-only) statements; the consolidated statements can be in the PDF of the amended report ("תיקון דוח"). Use the **consolidated** statements.
+* Real-estate / NAV companies (investment property, development): the capex concept does not fit — fill `totalDebt` (complete) and leave `fcfTTM` null with the reason in `notes`; the stock stays "preliminary" on FCF only.
 * **Backfill (do it now, not only from day 18):** for every company in `data/il/watchlist.json` whose `data/il/<current month>/<ticker>.json` has `totalDebt` or `fcfTTM` null, fill them (at most 6 companies per run, push after each), so that Stage 1 stops being "preliminary".
 * **Delete the PDF and everything else in `.work/tmp/` right after the extraction — also when it failed — and clean `.work/tmp/` at the end of every run** (the owner does not want the disk filled).
 * Before using a report, check the reports list for an amended report ("תיקון דוח ...") of the same period: if there is one, use its numbers or note the doubt.
@@ -25,7 +26,7 @@ Working copy: `C:\Users\yalia\portfolio-screener-data` (a git clone; `git push` 
 2. Numbers come from the sources you actually read in this run (MAYA, Bizportal, the SEC bridge files in `data/`), not from memory.
 3. Do not copy text from review sites or articles: paraphrase. (Shlomi Arden's review is for the owner's private use and may be cited and used as context — still
    paraphrase, and cite it as a source.)
-4. Commit and push after **each** finished file (`git add -A; git commit -m "<what>"; git pull --rebase; git push`) so an interrupted run loses nothing. Never `--force`.
+4. **Commit after each finished file** (`git add -A; git commit -m "<what>"`) so an interrupted run loses nothing. Your sandbox cannot write to GitHub (read only): do NOT try `git push`. A Windows scheduled task (`PortfolioScreenerPush`, `scripts/push_pending.ps1`) pushes the local commits every 30 minutes; the Apps Script reads GitHub, so a file counts only after that push (plus ~5 minutes of GitHub cache). Never `--force`; if `.git/index.lock` is stuck, wait a minute and retry, never delete it while a git process runs.
 5. If the web app answers "empty answer" / HTTP error: the owner must redeploy it — write that to `.work/problem.txt`, stop (the Apps Script sends the alert e-mail by itself).
 6. Work in the owner's time zone (Asia/Jerusalem). `D` = day of the month, `M` = this month `YYYY-MM`, `N` = next month.
 
@@ -57,11 +58,11 @@ If a phase is already complete, stop immediately and say so in one line.
        disagrees with his, say so in the risks / thesis.
      - A number cited only to MAYA is "unverifiable" for the code (it cannot read MAYA) — that is fine and not deleted, but prefer numbers that also appear in `S1`/Bizportal.
      - Debt-to-equity and FCF yield for an Israeli stock appear in `S1` only when `totalDebt` / `fcfTTM` are in its data file: if they are missing say "לא נמצא מידע" (the Stage 1 verdict is then "ראשוני").
-3. After about every 4 reports, and at the end: `node scripts/screener_api.mjs finalize`. The answer is `{ total, done, pending[], invalid[{ticker,reason}], emailed }`.
+3. The Apps Script runs `finalizeMonth` by itself every 2 hours on days 2-14 and sends the e-mail the moment every review is accepted. You may still call `NODE_USE_ENV_PROXY=1 node scripts/screener_api.mjs finalize` (it only sees what has already been PUSHED, so it is useful in a later window, not right after your commits) to read the `invalid` reasons: The answer is `{ total, done, pending[], invalid[{ticker,reason}], emailed }`.
    * `invalid` → fix exactly what `reason` says (rewrite the file, push, call `finalize` again). Do not argue with the validator; if a reason looks like a validator bug, write it to `.work/problem.txt`.
    * `emailed: true` means the monthly e-mail (TOP 10 with full reviews) went out → the month is done. Stop.
    * `pending` not empty and nothing left to write → the files are in the queue but rejected twice: leave them, note them in `.work/problem.txt`. The script e-mails the owner by itself (an alert from day 3, the report in any case on day 7).
-4. Do not write reviews for stocks that are not in the queue, and never edit the Apps Script.
+4. Check `status` first: reviews already `done` are not rewritten. Do not write reviews for stocks that are not in the queue, and never edit the Apps Script.
 
 ## Phase B — prepare next month (days 18–31): Israeli data
 The GitHub workflow already copies every watchlist company's latest data file into `data/il/N/` (`carriedForward: true`) and refreshes prices and market caps from Bizportal.
