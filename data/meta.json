@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-01T19:51:47.297Z",
+  "generatedAt": "2026-10-02T10:20:57.035Z",
   "tickersTotal": 59,
   "succeeded": 58,
-  "unchanged": 0,
+  "unchanged": 58,
   "failed": 1,
   "tagCount": 23,
   "failures": [
@@ -12,10 +12,10 @@
     }
   ],
   "filings": {
-    "generatedAt": "2026-10-01T19:56:52.718Z",
+    "generatedAt": "2026-10-02T10:25:56.202Z",
     "tickersTotal": 59,
-    "fetched": 1,
-    "unchanged": 57,
+    "fetched": 0,
+    "unchanged": 58,
     "skipped": 1,
     "failed": 0,
     "reasons": [
@@ -26,168 +26,80 @@
     ]
   },
   "releases": {
-    "generatedAt": "2026-10-01T19:57:05.559Z",
+    "generatedAt": "2026-10-02T10:26:08.820Z",
     "tickersTotal": 59,
-    "fetched": 43,
-    "unchanged": 0,
-    "skipped": 5,
-    "failed": 11,
+    "fetched": 13,
+    "unchanged": 42,
+    "skipped": 1,
+    "failed": 3,
     "reasons": [
       {
-        "ticker": "NOC",
-        "reason": "0001133421-26-000033: no exhibit 99 found"
-      },
-      {
-        "ticker": "NOC",
-        "reason": "0001133421-26-000015: no exhibit 99 found"
-      },
-      {
-        "ticker": "NOC",
-        "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "ASML",
-        "reason": "no earnings-release 8-K (Item 2.02) among the recent filings"
+        "ticker": "TSM",
+        "reason": "0001046179-26-000660: no exhibit 99 found"
       },
       {
         "ticker": "TSM",
-        "reason": "no earnings-release 8-K (Item 2.02) among the recent filings"
+        "reason": "0001046179-26-000658: no exhibit 99 found"
       },
       {
-        "ticker": "LRCX",
-        "reason": "0000707549-26-000033: no exhibit 99 found"
+        "ticker": "TSM",
+        "reason": "0001046179-26-000552: no exhibit 99 found"
       },
       {
-        "ticker": "LRCX",
-        "reason": "0000707549-26-000020: no exhibit 99 found"
+        "ticker": "TSM",
+        "reason": "0001046179-26-000545: no exhibit 99 found"
       },
       {
-        "ticker": "LRCX",
-        "reason": "no release text could be read (previous file kept)"
+        "ticker": "TSM",
+        "reason": "0001046179-26-000539: no exhibit 99 found"
       },
       {
-        "ticker": "NVDA",
-        "reason": "0001045810-26-000073: no exhibit 99 found"
+        "ticker": "TSM",
+        "reason": "0001046179-26-000536: no exhibit 99 found"
       },
       {
-        "ticker": "NVDA",
-        "reason": "0001045810-26-000051: no exhibit 99 found"
+        "ticker": "TSM",
+        "reason": "0001046179-26-000471: no exhibit 99 found"
       },
       {
-        "ticker": "NVDA",
-        "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "AMD",
-        "reason": "0000002488-26-000121: no exhibit 99 found"
-      },
-      {
-        "ticker": "AMD",
-        "reason": "0000002488-26-000072: no exhibit 99 found"
-      },
-      {
-        "ticker": "AMD",
-        "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "SMCI",
-        "reason": "0001375365-26-000019: no exhibit 99 found"
-      },
-      {
-        "ticker": "EQIX",
-        "reason": "0001101239-26-000145: no exhibit 99 found"
-      },
-      {
-        "ticker": "EQIX",
-        "reason": "0001101239-26-000089: no exhibit 99 found"
-      },
-      {
-        "ticker": "EQIX",
-        "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "CEG",
-        "reason": "0001868275-26-000097: no exhibit 99 found"
-      },
-      {
-        "ticker": "CEG",
-        "reason": "0001868275-26-000063: no exhibit 99 found"
-      },
-      {
-        "ticker": "CEG",
-        "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "VST",
-        "reason": "0001692819-26-000017: no exhibit 99 found"
-      },
-      {
-        "ticker": "VST",
-        "reason": "0001692819-26-000011: no exhibit 99 found"
-      },
-      {
-        "ticker": "VST",
-        "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "TLN",
-        "reason": "0001622536-26-000065: no exhibit 99 found"
-      },
-      {
-        "ticker": "TLN",
-        "reason": "0001622536-26-000035: no exhibit 99 found"
-      },
-      {
-        "ticker": "TLN",
+        "ticker": "TSM",
         "reason": "no release text could be read (previous file kept)"
       },
       {
         "ticker": "CCJ",
-        "reason": "no earnings-release 8-K (Item 2.02) among the recent filings"
-      },
-      {
-        "ticker": "ZS",
-        "reason": "0001713683-26-000156: no exhibit 99 found"
-      },
-      {
-        "ticker": "ZS",
-        "reason": "0001713683-26-000095: no exhibit 99 found"
-      },
-      {
-        "ticker": "ZS",
         "reason": "no release text could be read (previous file kept)"
       },
       {
         "ticker": "CHKP",
-        "reason": "no earnings-release 8-K (Item 2.02) among the recent filings"
+        "reason": "0001178913-26-004498: no exhibit 99 found"
       },
       {
-        "ticker": "CARR",
-        "reason": "0001783180-26-000030: no exhibit 99 found"
+        "ticker": "CHKP",
+        "reason": "0001178913-26-003696: no exhibit 99 found"
       },
       {
-        "ticker": "CARR",
-        "reason": "0001783180-26-000023: no exhibit 99 found"
+        "ticker": "CHKP",
+        "reason": "0001178913-26-003557: no exhibit 99 found"
       },
       {
-        "ticker": "CARR",
+        "ticker": "CHKP",
+        "reason": "0001178913-26-003452: no exhibit 99 found"
+      },
+      {
+        "ticker": "CHKP",
+        "reason": "0001178913-26-003128: no exhibit 99 found"
+      },
+      {
+        "ticker": "CHKP",
+        "reason": "0001178913-26-002310: no exhibit 99 found"
+      },
+      {
+        "ticker": "CHKP",
         "reason": "no release text could be read (previous file kept)"
       },
       {
         "ticker": "VLTO",
         "reason": "no CIK"
-      },
-      {
-        "ticker": "TENB",
-        "reason": "0001660280-26-000032: no exhibit 99 found"
-      },
-      {
-        "ticker": "TENB",
-        "reason": "0001660280-26-000020: no exhibit 99 found"
-      },
-      {
-        "ticker": "TENB",
-        "reason": "no release text could be read (previous file kept)"
       }
     ]
   }
