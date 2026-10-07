@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T11:03:35.823Z",
+  "generatedAt": "2026-10-07T10:53:32.364Z",
   "tickersTotal": 59,
   "succeeded": 58,
   "unchanged": 58,
@@ -12,7 +12,7 @@
     }
   ],
   "filings": {
-    "generatedAt": "2026-10-06T11:08:38.407Z",
+    "generatedAt": "2026-10-07T10:58:48.208Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 58,
@@ -26,7 +26,7 @@
     ]
   },
   "releases": {
-    "generatedAt": "2026-10-06T11:08:51.033Z",
+    "generatedAt": "2026-10-07T10:59:00.854Z",
     "tickersTotal": 59,
     "fetched": 1,
     "unchanged": 54,
