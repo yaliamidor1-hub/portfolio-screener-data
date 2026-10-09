@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-08T11:11:01.227Z",
+  "generatedAt": "2026-10-09T11:10:00.010Z",
   "tickersTotal": 59,
   "succeeded": 58,
-  "unchanged": 32,
+  "unchanged": 26,
   "failed": 1,
   "tagCount": 23,
   "failures": [
@@ -12,7 +12,7 @@
     }
   ],
   "filings": {
-    "generatedAt": "2026-10-08T11:16:18.640Z",
+    "generatedAt": "2026-10-09T11:15:06.161Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 58,
@@ -26,7 +26,7 @@
     ]
   },
   "releases": {
-    "generatedAt": "2026-10-08T11:16:31.326Z",
+    "generatedAt": "2026-10-09T11:15:18.765Z",
     "tickersTotal": 59,
     "fetched": 1,
     "unchanged": 54,
