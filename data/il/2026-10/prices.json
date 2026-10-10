@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "generatedAt": "2026-10-09T11:16:12.149Z",
+  "generatedAt": "2026-10-10T10:33:37.050Z",
   "note": "TASE last price as published by Bizportal (source URL per price); price in agorot",
   "prices": [
     {
@@ -57,7 +57,7 @@
       "priceUnit": "agorot",
       "priceDate": "2026-10-09",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1080597",
-      "marketCap": 253164
+      "marketCap": 252318
     },
     {
       "securityNumber": "1184985",
@@ -145,7 +145,7 @@
       "priceUnit": "agorot",
       "priceDate": "2026-10-09",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1083955",
-      "marketCap": 1558760
+      "marketCap": 1556701
     },
     {
       "securityNumber": "1082007",
@@ -153,7 +153,7 @@
       "priceUnit": "agorot",
       "priceDate": "2026-10-09",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1082007",
-      "marketCap": 261394
+      "marketCap": 261316
     }
   ]
 }
