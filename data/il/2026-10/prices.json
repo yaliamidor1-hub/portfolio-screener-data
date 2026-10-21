@@ -1,159 +1,159 @@
 {
   "month": "2026-10",
-  "generatedAt": "2026-10-20T09:18:05.966Z",
+  "generatedAt": "2026-10-21T09:16:26.183Z",
   "note": "TASE last price as published by Bizportal (source URL per price); price in agorot",
   "prices": [
     {
       "securityNumber": "731018",
-      "price": 17270,
+      "price": 17460,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/731018",
-      "marketCap": 1830276
+      "marketCap": 1850412
     },
     {
       "securityNumber": "1171818",
-      "price": 1043,
+      "price": 1066,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1171818",
-      "marketCap": 215314
+      "marketCap": 220062
     },
     {
       "securityNumber": "175018",
-      "price": 41030,
+      "price": 41070,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/175018",
-      "marketCap": 5813548
+      "marketCap": 5819216
     },
     {
       "securityNumber": "770016",
-      "price": 159.2,
+      "price": 160,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/770016",
-      "marketCap": 308349
+      "marketCap": 309899
     },
     {
       "securityNumber": "366013",
-      "price": 520.7,
+      "price": 528.6,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/366013",
-      "marketCap": 2424974
+      "marketCap": 2461773
     },
     {
       "securityNumber": "454017",
-      "price": 2098,
+      "price": 2120,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/454017",
-      "marketCap": 955400
+      "marketCap": 965419
     },
     {
       "securityNumber": "1080597",
       "price": 203.1,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1080597",
-      "marketCap": 245230
+      "marketCap": 245636
     },
     {
       "securityNumber": "1184985",
-      "price": 3160,
+      "price": 3140,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1184985",
-      "marketCap": 1621976
+      "marketCap": 1611710
     },
     {
       "securityNumber": "354019",
-      "price": 32670,
+      "price": 32200,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/354019",
-      "marketCap": 2985303
+      "marketCap": 2942356
     },
     {
       "securityNumber": "127019",
-      "price": 39640,
+      "price": 40070,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/127019",
-      "marketCap": 3855879
+      "marketCap": 3897706
     },
     {
       "securityNumber": "1081843",
-      "price": 12150,
+      "price": 12290,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1081843",
-      "marketCap": 10352585
+      "marketCap": 10471874
     },
     {
       "securityNumber": "1170893",
-      "price": 2332,
+      "price": 2343,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1170893",
-      "marketCap": 1427342
+      "marketCap": 1434075
     },
     {
       "securityNumber": "338012",
-      "price": 5313,
+      "price": 5261,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/338012",
-      "marketCap": 715484
+      "marketCap": 708481
     },
     {
       "securityNumber": "1141969",
-      "price": 12340,
+      "price": 12020,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1141969",
-      "marketCap": 15215351
+      "marketCap": 14822776
     },
     {
       "securityNumber": "1095785",
-      "price": 1056,
+      "price": 1048,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1095785",
-      "marketCap": 158822
+      "marketCap": 157619
     },
     {
       "securityNumber": "1175439",
-      "price": 3657,
+      "price": 3562,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1175439",
-      "marketCap": 1330914
+      "marketCap": 1296340
     },
     {
       "securityNumber": "1087022",
-      "price": 30730,
+      "price": 30850,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1087022",
-      "marketCap": 4274120
+      "marketCap": 4290811
     },
     {
       "securityNumber": "1083955",
-      "price": 32300,
+      "price": 31950,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1083955",
-      "marketCap": 1558568
+      "marketCap": 1540753
     },
     {
       "securityNumber": "1082007",
-      "price": 715.3,
+      "price": 706.2,
       "priceUnit": "agorot",
-      "priceDate": "2026-10-20",
+      "priceDate": "2026-10-21",
       "source": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1082007",
-      "marketCap": 269169
+      "marketCap": 265730
     }
   ]
 }
