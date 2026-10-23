@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-22T09:12:46.593Z",
+  "generatedAt": "2026-10-23T09:09:06.031Z",
   "tickersTotal": 59,
   "succeeded": 58,
-  "unchanged": 58,
+  "unchanged": 3,
   "failed": 1,
   "tagCount": 23,
   "failures": [
@@ -12,7 +12,7 @@
     }
   ],
   "filings": {
-    "generatedAt": "2026-10-22T09:18:32.343Z",
+    "generatedAt": "2026-10-23T09:14:05.650Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 58,
@@ -26,13 +26,17 @@
     ]
   },
   "releases": {
-    "generatedAt": "2026-10-22T09:18:45.064Z",
+    "generatedAt": "2026-10-23T09:14:18.275Z",
     "tickersTotal": 59,
-    "fetched": 4,
-    "unchanged": 52,
+    "fetched": 3,
+    "unchanged": 53,
     "skipped": 1,
     "failed": 2,
     "reasons": [
+      {
+        "ticker": "TSM",
+        "reason": "0001046179-26-000728: no exhibit 99 found"
+      },
       {
         "ticker": "TSM",
         "reason": "0001046179-26-000680: no exhibit 99 found"
@@ -52,10 +56,6 @@
       {
         "ticker": "TSM",
         "reason": "0001046179-26-000545: no exhibit 99 found"
-      },
-      {
-        "ticker": "TSM",
-        "reason": "0001046179-26-000539: no exhibit 99 found"
       },
       {
         "ticker": "CCJ",
