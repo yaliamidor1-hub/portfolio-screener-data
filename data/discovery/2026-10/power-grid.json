@@ -1,0 +1,83 @@
+[
+  {
+    "ticker": "DUK",
+    "name": "Duke Energy Corp",
+    "why": "חברת חשמל גדולה בדרום-מזרח ארה\"ב עם ביקוש גובר ממרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DUK&type=10-K",
+      "https://stockanalysis.com/stocks/duk/company/"
+    ]
+  },
+  {
+    "ticker": "SO",
+    "name": "Southern Co",
+    "why": "חברת חשמל וגז אזורית עם צמיחת ביקוש תעשייתית",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SO&type=10-K",
+      "https://stockanalysis.com/stocks/so/company/"
+    ]
+  },
+  {
+    "ticker": "AEP",
+    "name": "American Electric Power Co Inc",
+    "why": "חברת חשמל גדולה ורשת תמסורת נרחבת בארה\"ב",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AEP&type=10-K",
+      "https://stockanalysis.com/stocks/aep/company/"
+    ]
+  },
+  {
+    "ticker": "XEL",
+    "name": "Xcel Energy Inc",
+    "why": "חברת חשמל וגז עם השקעות נרחבות ברשת",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XEL&type=10-K",
+      "https://stockanalysis.com/stocks/xel/company/"
+    ]
+  },
+  {
+    "ticker": "POWL",
+    "name": "Powell Industries Inc",
+    "why": "ציוד הפצת חשמל ומתגים לתעשייה ולשירותים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=POWL&type=10-K",
+      "https://stockanalysis.com/stocks/powl/company/"
+    ]
+  },
+  {
+    "ticker": "GNRC",
+    "name": "Generac Holdings Inc",
+    "why": "גנרטורים וציוד גיבוי חשמל",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GNRC&type=10-K",
+      "https://stockanalysis.com/stocks/gnrc/company/"
+    ]
+  },
+  {
+    "ticker": "MTZ",
+    "name": "MasTec Inc",
+    "why": "בניית תשתיות חשמל, תקשורת ואנרגיה",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MTZ&type=10-K",
+      "https://stockanalysis.com/stocks/mtz/company/"
+    ]
+  },
+  {
+    "ticker": "EME",
+    "name": "EMCOR Group Inc",
+    "why": "הנדסה ותשתיות חשמל ומיזוג למבנים ומרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EME&type=10-K",
+      "https://stockanalysis.com/stocks/eme/company/"
+    ]
+  },
+  {
+    "ticker": "AES",
+    "name": "AES Corp",
+    "why": "ייצור חשמל ואנרגיה מתחדשת ואחסון",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AES&type=10-K",
+      "https://stockanalysis.com/stocks/aes/company/"
+    ]
+  }
+]
