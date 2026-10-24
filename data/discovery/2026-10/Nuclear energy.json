@@ -1,0 +1,65 @@
+[
+  {
+    "ticker": "LEU",
+    "name": "Centrus Energy Corp",
+    "why": "ספקית אורניום מועשר לתחנות כוח גרעיניות",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LEU&type=10-K",
+      "https://stockanalysis.com/stocks/leu/company/"
+    ]
+  },
+  {
+    "ticker": "OKLO",
+    "name": "Oklo Inc",
+    "why": "מפתחת כורים גרעיניים קטנים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=OKLO&type=10-K",
+      "https://stockanalysis.com/stocks/oklo/company/"
+    ]
+  },
+  {
+    "ticker": "SMR",
+    "name": "NuScale Power Corp",
+    "why": "מפתחת כורים מודולריים קטנים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SMR&type=10-K",
+      "https://stockanalysis.com/stocks/smr/company/"
+    ]
+  },
+  {
+    "ticker": "NNE",
+    "name": "Nano Nuclear Energy Inc",
+    "why": "מפתחת מיקרו-כורים גרעיניים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NNE&type=10-K",
+      "https://stockanalysis.com/stocks/nne/company/"
+    ]
+  },
+  {
+    "ticker": "UEC",
+    "name": "Uranium Energy Corp",
+    "why": "חברת הפקת אורניום בארה\"ב",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UEC&type=10-K",
+      "https://stockanalysis.com/stocks/uec/company/"
+    ]
+  },
+  {
+    "ticker": "UUUU",
+    "name": "Energy Fuels Inc",
+    "why": "הפקת אורניום ומינרלים נדירים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UUUU&type=10-K",
+      "https://stockanalysis.com/stocks/uuuu/company/"
+    ]
+  },
+  {
+    "ticker": "FLR",
+    "name": "Fluor Corp",
+    "why": "חברת הנדסה ובנייה, פעילה גם בפרויקטים גרעיניים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FLR&type=10-K",
+      "https://stockanalysis.com/stocks/flr/company/"
+    ]
+  }
+]
