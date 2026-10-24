@@ -1,0 +1,83 @@
+[
+  {
+    "ticker": "ASTS",
+    "name": "AST SpaceMobile Inc",
+    "why": "רשת לוויינים לחיבור ישיר לסלולר",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ASTS&type=10-K",
+      "https://stockanalysis.com/stocks/asts/company/"
+    ]
+  },
+  {
+    "ticker": "LUNR",
+    "name": "Intuitive Machines Inc",
+    "why": "חברת חלל לנחתות ירח ושירותי חלל",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LUNR&type=10-K",
+      "https://stockanalysis.com/stocks/lunr/company/"
+    ]
+  },
+  {
+    "ticker": "PL",
+    "name": "Planet Labs PBC",
+    "why": "צילום לוויינים וניתוח נתונים גיאו-מרחביים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PL&type=10-K",
+      "https://stockanalysis.com/stocks/pl/company/"
+    ]
+  },
+  {
+    "ticker": "RDW",
+    "name": "Redwire Corp",
+    "why": "תשתיות חלל ורכיבים ללוויינים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RDW&type=10-K",
+      "https://stockanalysis.com/stocks/rdw/company/"
+    ]
+  },
+  {
+    "ticker": "IRDM",
+    "name": "Iridium Communications Inc",
+    "why": "רשת לוויינים לתקשורת גלובלית",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IRDM&type=10-K",
+      "https://stockanalysis.com/stocks/irdm/company/"
+    ]
+  },
+  {
+    "ticker": "VSAT",
+    "name": "Viasat Inc",
+    "why": "תקשורת לוויינית ופתרונות רשת",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VSAT&type=10-K",
+      "https://stockanalysis.com/stocks/vsat/company/"
+    ]
+  },
+  {
+    "ticker": "GSAT",
+    "name": "Globalstar Inc",
+    "why": "תקשורת לוויינית ניידת",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GSAT&type=10-K",
+      "https://stockanalysis.com/stocks/gsat/company/"
+    ]
+  },
+  {
+    "ticker": "BKSY",
+    "name": "BlackSky Technology Inc",
+    "why": "צילום לוויינים ומודיעין גיאו-מרחבי",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BKSY&type=10-K",
+      "https://stockanalysis.com/stocks/bksy/company/"
+    ]
+  },
+  {
+    "ticker": "SATS",
+    "name": "EchoStar Corp",
+    "why": "תקשורת לוויינית ושירותי רשת",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SATS&type=10-K",
+      "https://stockanalysis.com/stocks/sats/company/"
+    ]
+  }
+]
