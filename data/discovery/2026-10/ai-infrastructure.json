@@ -1,0 +1,92 @@
+[
+  {
+    "ticker": "CRDO",
+    "name": "Credo Technology Group Holding Ltd",
+    "why": "קישוריות מהירה לשרתים ולרשתות של מרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CRDO&type=10-K",
+      "https://stockanalysis.com/stocks/crdo/company/"
+    ]
+  },
+  {
+    "ticker": "ALAB",
+    "name": "Astera Labs Inc",
+    "why": "שבבי קישוריות לשרתי בינה מלאכותית",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ALAB&type=10-K",
+      "https://stockanalysis.com/stocks/alab/company/"
+    ]
+  },
+  {
+    "ticker": "APH",
+    "name": "Amphenol Corp",
+    "why": "מחברים וכבלים למרכזי נתונים ולתשתיות מחשוב",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APH&type=10-K",
+      "https://stockanalysis.com/stocks/aph/company/"
+    ]
+  },
+  {
+    "ticker": "CIEN",
+    "name": "Ciena Corp",
+    "why": "ציוד רשתות אופטי לחיבור מרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CIEN&type=10-K",
+      "https://stockanalysis.com/stocks/cien/company/"
+    ]
+  },
+  {
+    "ticker": "LITE",
+    "name": "Lumentum Holdings Inc",
+    "why": "רכיבים אופטיים ולייזרים לרשתות מרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LITE&type=10-K",
+      "https://stockanalysis.com/stocks/lite/company/"
+    ]
+  },
+  {
+    "ticker": "CLS",
+    "name": "Celestica Inc",
+    "why": "יצרנית שרתים ורשתות עבור ענקיות הענן",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CLS&type=10-K",
+      "https://stockanalysis.com/stocks/cls/company/"
+    ]
+  },
+  {
+    "ticker": "PSTG",
+    "name": "Pure Storage Inc",
+    "why": "פתרונות אחסון נתונים לארגונים ולעומסי בינה מלאכותית",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PSTG&type=10-K",
+      "https://stockanalysis.com/stocks/pstg/company/"
+    ]
+  },
+  {
+    "ticker": "NTAP",
+    "name": "NetApp Inc",
+    "why": "אחסון ושירותי נתונים בענן ובמרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NTAP&type=10-K",
+      "https://stockanalysis.com/stocks/ntap/company/"
+    ]
+  },
+  {
+    "ticker": "DLR",
+    "name": "Digital Realty Trust Inc",
+    "why": "קרן נדל\"ן למרכזי נתונים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DLR&type=10-K",
+      "https://stockanalysis.com/stocks/dlr/company/"
+    ]
+  },
+  {
+    "ticker": "ORCL",
+    "name": "Oracle Corp",
+    "why": "תשתית ענן ומסדי נתונים לעומסי בינה מלאכותית",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ORCL&type=10-K",
+      "https://stockanalysis.com/stocks/orcl/company/"
+    ]
+  }
+]
