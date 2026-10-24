@@ -1,0 +1,83 @@
+[
+  {
+    "ticker": "TDG",
+    "name": "TransDigm Group Inc",
+    "why": "ספקית רכיבי תעופה וביטחון ייחודיים עם נתח גדול משוק חלפי הרכב",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TDG&type=10-K",
+      "https://stockanalysis.com/stocks/tdg/company/"
+    ]
+  },
+  {
+    "ticker": "HEI",
+    "name": "HEICO Corp",
+    "why": "רכיבי תעופה וחלפים וכן מערכות אלקטרוניקה לביטחון וחלל",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HEI&type=10-K",
+      "https://stockanalysis.com/stocks/hei/company/"
+    ]
+  },
+  {
+    "ticker": "CW",
+    "name": "Curtiss-Wright Corp",
+    "why": "מערכות ורכיבים לצי, הגנה אווירית ומערכות הנדסיות לביטחון",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CW&type=10-K",
+      "https://stockanalysis.com/stocks/cw/company/"
+    ]
+  },
+  {
+    "ticker": "LDOS",
+    "name": "Leidos Holdings Inc",
+    "why": "קבלנית טכנולוגיה וביטחון לממשל האמריקאי",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LDOS&type=10-K",
+      "https://stockanalysis.com/stocks/ldos/company/"
+    ]
+  },
+  {
+    "ticker": "BAH",
+    "name": "Booz Allen Hamilton Holding Corp",
+    "why": "יועצת ושירותי טכנולוגיה לביטחון ולמודיעין האמריקאי",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BAH&type=10-K",
+      "https://stockanalysis.com/stocks/bah/company/"
+    ]
+  },
+  {
+    "ticker": "CACI",
+    "name": "CACI International Inc",
+    "why": "פתרונות מודיעין, סייבר ותקשורת למשרד הביטחון האמריקאי",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CACI&type=10-K",
+      "https://stockanalysis.com/stocks/caci/company/"
+    ]
+  },
+  {
+    "ticker": "AXON",
+    "name": "Axon Enterprise Inc",
+    "why": "ציוד ותוכנה לאכיפת חוק ולביטחון הציבור",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AXON&type=10-K",
+      "https://stockanalysis.com/stocks/axon/company/"
+    ]
+  },
+  {
+    "ticker": "MRCY",
+    "name": "Mercury Systems Inc",
+    "why": "מערכות עיבוד אלקטרוניות ייעודיות לתעשיות ביטחוניות",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRCY&type=10-K",
+      "https://stockanalysis.com/stocks/mrcy/company/"
+    ]
+  },
+  {
+    "ticker": "TXT",
+    "name": "Textron Inc",
+    "why": "יצרנית מטוסים ומערכות ביטחוניות, כולל Bell ו-Textron Systems",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TXT&type=10-K",
+      "https://stockanalysis.com/stocks/txt/company/"
+    ]
+  }
+]
