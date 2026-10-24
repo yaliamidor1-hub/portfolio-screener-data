@@ -1,0 +1,83 @@
+[
+  {
+    "ticker": "ENTG",
+    "name": "Entegris Inc",
+    "why": "חומרים ורכיבי סינון וניקיון לייצור שבבים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ENTG&type=10-K",
+      "https://stockanalysis.com/stocks/entg/company/"
+    ]
+  },
+  {
+    "ticker": "ONTO",
+    "name": "Onto Innovation Inc",
+    "why": "ציוד מדידה ובקרת תהליך לייצור שבבים ואריזה מתקדמת",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ONTO&type=10-K",
+      "https://stockanalysis.com/stocks/onto/company/"
+    ]
+  },
+  {
+    "ticker": "KLIC",
+    "name": "Kulicke and Soffa Industries Inc",
+    "why": "ציוד חיבור והרכבה של שבבים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KLIC&type=10-K",
+      "https://stockanalysis.com/stocks/klic/company/"
+    ]
+  },
+  {
+    "ticker": "FORM",
+    "name": "FormFactor Inc",
+    "why": "כרטיסי בדיקה וציוד בדיקת וופרים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FORM&type=10-K",
+      "https://stockanalysis.com/stocks/form/company/"
+    ]
+  },
+  {
+    "ticker": "ACLS",
+    "name": "Axcelis Technologies Inc",
+    "why": "ציוד השתלת יונים לייצור שבבים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ACLS&type=10-K",
+      "https://stockanalysis.com/stocks/acls/company/"
+    ]
+  },
+  {
+    "ticker": "CAMT",
+    "name": "Camtek Ltd",
+    "why": "ציוד בדיקה ומדידה לאריזה מתקדמת של שבבים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CAMT&type=10-K",
+      "https://stockanalysis.com/stocks/camt/company/"
+    ]
+  },
+  {
+    "ticker": "AEIS",
+    "name": "Advanced Energy Industries Inc",
+    "why": "ספקי הספק מדויק לציוד ייצור שבבים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AEIS&type=10-K",
+      "https://stockanalysis.com/stocks/aeis/company/"
+    ]
+  },
+  {
+    "ticker": "MKSI",
+    "name": "MKS Instruments Inc",
+    "why": "מכשור ותת-מערכות לתהליכי ייצור שבבים",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MKSI&type=10-K",
+      "https://stockanalysis.com/stocks/mksi/company/"
+    ]
+  },
+  {
+    "ticker": "COHR",
+    "name": "Coherent Corp",
+    "why": "לייזרים ורכיבים אופטיים ולשבבי תקשורת",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COHR&type=10-K",
+      "https://stockanalysis.com/stocks/cohr/company/"
+    ]
+  }
+]
