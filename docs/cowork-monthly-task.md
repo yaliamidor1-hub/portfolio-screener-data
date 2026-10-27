@@ -40,6 +40,7 @@ This task is scheduled and runs without the owner. The owner has approved automa
 6. Work in the owner's time zone (Asia/Jerusalem). `D` = day of the month, `M` = this month `YYYY-MM`, `N` = next month.
 
 ## Step 0 — every run
+First, once per run: if `git pull` fails because of a `*.lock` file, call `device_request_delete_permission` for the working copy, remove the **empty stale** lock files under `.git/` (only if no git process runs: `ps aux | grep [g]it`), and retry the pull once. Never loop; if still blocked, write it to `.work/problem.txt` and stop. The sandbox itself creates these locks (it cannot unlink git temp files), and `push_pending.ps1` also removes stale empty locks every 30 minutes.
 ```
 git pull --rebase
 node scripts/screener_api.mjs status          # -> { month, total, done, rows[], emailSent }

@@ -15,6 +15,12 @@ if (Test-Path $lock) {
   if ($age.TotalMinutes -gt 2 -and -not (Get-Process git -ErrorAction SilentlyContinue)) { Remove-Item $lock -Force; Log 'removed a stale index.lock' }
   else { Log 'index.lock present, git is busy - skipped'; exit 0 }
 }
+# other stale lock files left behind by the sandbox (it cannot unlink git's temp files): same safety rule
+if (-not (Get-Process git -ErrorAction SilentlyContinue)) {
+  Get-ChildItem (Join-Path $repo '.git') -Recurse -Filter '*.lock' -File -ErrorAction SilentlyContinue |
+    Where-Object { $_.Length -eq 0 -and ((Get-Date) - $_.LastWriteTime).TotalMinutes -gt 2 } |
+    ForEach-Object { Remove-Item $_.FullName -Force; Log ("removed stale lock " + $_.Name) }
+}
 git fetch origin main 2>&1 | Out-Null
 $ahead = (git rev-list --count origin/main..HEAD 2>$null)
 if (-not $ahead -or [int]$ahead -eq 0) { exit 0 }
