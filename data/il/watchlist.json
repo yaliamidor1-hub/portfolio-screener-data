@@ -134,6 +134,14 @@
       "symbol": "שוהם",
       "issuerId": "1071",
       "isFinancial": true
+    },
+    {
+      "ticker": "1178714",
+      "name": "טרמינל איקס אונליין",
+      "symbol": "טרקס",
+      "issuerId": "1948",
+      "isFinancial": false,
+      "addedMonth": "2026-11"
     }
   ]
 }

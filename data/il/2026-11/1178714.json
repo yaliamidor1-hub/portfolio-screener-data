@@ -1,0 +1,33 @@
+{
+  "ticker": "1178714",
+  "month": "2026-11",
+  "name": "טרמינל איקס אונליין",
+  "symbol": "טרקס",
+  "issuerId": "1948",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 922026,
+  "netIncomeAttributableTTM": 33220,
+  "equityAttributable": 265534,
+  "ocfTTMBeforeCapex": 68512,
+  "totalDebt": 155876,
+  "fcfTTM": 27807,
+  "price": 698.7,
+  "priceUnit": "agorot",
+  "priceDate": "2026-10-28",
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1948"
+    },
+    {
+      "url": "https://maya.tase.co.il/he/reports/1765389"
+    },
+    {
+      "url": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1178714"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוח רבעון 2/חצי שנתי 2026 (MAYA 1765389, PDF), אלפי ש\"ח. רווח מיוחס TTM = 28,358+17,407-12,545; הון מיוחס = 290,597-25,063 (זכויות מיעוט). totalDebt = אשראי מתאגידים 15,297 + הלוואות לזמן ארוך 84 + חכירה שוטפת 31,610 + חכירה לא שוטפת 108,885 = 155,876 (דוח מצב כספי עמ' 32). fcfTTM = OCF 68,512 (50,103+22,978-4,569) - רכוש קבוע 6,418 - נכסים בלתי מוחשיים 5,391 - קרן חכירה 28,896 (27,355+14,929-13,388) = 27,807 (תזרים עמ' 33); לא כולל רכישות חברות. שווי שוק מ-MAYA ליום 26/10/2026."
+}
