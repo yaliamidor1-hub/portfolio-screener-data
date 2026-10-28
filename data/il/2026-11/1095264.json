@@ -1,0 +1,34 @@
+{
+  "ticker": "1095264",
+  "month": "2026-11",
+  "name": "קמטק",
+  "symbol": "קמטק",
+  "issuerId": "2174",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 17822561,
+  "netIncomeAttributableTTM": 115371,
+  "equityAttributable": 2175229,
+  "totalDebt": null,
+  "fcfTTM": null,
+  "price": 40320,
+  "priceUnit": "agorot",
+  "priceDate": "2026-10-28",
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/2174"
+    },
+    {
+      "url": "https://maya.tase.co.il/he/reports/1762470"
+    },
+    {
+      "url": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1095264"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוחות ב-USD (אלפי $), הומרו בשער 3.063. תקציר MAYA: רווח מיוחס TTM = 50,722+54,950-68,006 = 37,666; הון = 710,163. חברה זרה (20-F): ב-MAYA קיימת רק הודעת תוצאות רבעון 2 (6-K, מס' 1762470) ללא דוח תזרים וללא פירוט חכירות, לכן totalDebt ו-fcfTTM = null (אג\"ח להמרה 488,497 בלבד מופיעות במאזן). שווי שוק מ-MAYA ליום 26/10/2026."
+}

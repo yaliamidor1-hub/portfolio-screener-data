@@ -150,6 +150,14 @@
       "issuerId": "1916",
       "isFinancial": false,
       "addedMonth": "2026-11"
+    },
+    {
+      "ticker": "1095264",
+      "name": "קמטק",
+      "symbol": "קמטק",
+      "issuerId": "2174",
+      "isFinancial": false,
+      "addedMonth": "2026-11"
     }
   ]
 }
