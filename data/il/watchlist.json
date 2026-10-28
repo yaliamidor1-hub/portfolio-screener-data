@@ -166,6 +166,14 @@
       "issuerId": "1152",
       "isFinancial": false,
       "addedMonth": "2026-11"
+    },
+    {
+      "ticker": "445015",
+      "name": "מטריקס אי.טי",
+      "symbol": "מטרקס",
+      "issuerId": "445",
+      "isFinancial": false,
+      "addedMonth": "2026-11"
     }
   ]
 }

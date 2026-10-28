@@ -1,0 +1,33 @@
+{
+  "ticker": "445015",
+  "month": "2026-11",
+  "name": "מטריקס אי.טי",
+  "symbol": "מטרקס",
+  "issuerId": "445",
+  "unit": "thousands",
+  "currency": "ILS",
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 10485288,
+  "netIncomeAttributableTTM": 459560,
+  "equityAttributable": 1906710,
+  "ocfTTMBeforeCapex": 688183,
+  "totalDebt": 1423360,
+  "fcfTTM": 471312,
+  "price": 11100,
+  "priceUnit": "agorot",
+  "priceDate": "2026-10-28",
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/445"
+    },
+    {
+      "url": "https://maya.tase.co.il/he/reports/1763967"
+    },
+    {
+      "url": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/445015"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוח רבעון 2/חצי שנתי 2026 (MAYA 1763967, PDF), אלפי ש\"ח; נתוני 2025 מסווגים למפרע בגין המיזוג. רווח מיוחס TTM = 364,724+243,333-148,497; הון מיוחס 1,906,710 (מאזן עמ' 5). totalDebt = אשראי בנקאי שוטף 421,118 + חלות אג\"ח 78,669 + חלות חכירה 125,086 + אשראי בנקאי לא שוטף 44,027 + אג\"ח 197,425 + אג\"ח להמרה 250,534 + חכירה 306,501 = 1,423,360 (עמ' 4-5; ללא התחייבויות אופציה למיעוט). fcfTTM = OCF TTM 688,183 (1,048,167-146,265-213,719) - רכוש קבוע 48,715 - פיתוח תוכנה 8,190 - קרן חכירה 159,966 = 471,312 (תזרים עמ' 12-13). שווי שוק מ-MAYA ליום 26/10/2026."
+}
