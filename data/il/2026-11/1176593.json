@@ -1,0 +1,35 @@
+{
+  "ticker": "1176593",
+  "month": "2026-11",
+  "name": "נקסט ויז'ן מערכות מיוצבות",
+  "symbol": "נקסט ויז'ן",
+  "issuerId": "1916",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 18441675,
+  "netIncomeAttributableTTM": 464899,
+  "equityAttributable": 2058103,
+  "ocfTTMBeforeCapex": 375165,
+  "totalDebt": null,
+  "fcfTTM": 361979,
+  "price": 19700,
+  "priceUnit": "agorot",
+  "priceDate": "2026-10-28",
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1916"
+    },
+    {
+      "url": "https://maya.tase.co.il/he/reports/1762409"
+    },
+    {
+      "url": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1176593"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוחות ב-USD (אלפי $), הומרו בשער 3.063. דוח רבעון 2/חצי שנתי 2026 (MAYA 1762409, PDF). רווח מיוחס TTM = 103,664+91,911-43,796 = 151,779; הון = 671,924. fcfTTM = OCF TTM 122,483 (63,640+75,157-16,314) - רכוש קבוע 734 - עלויות פיתוח שהוונו 3,056 - קרן חכירה 515 = 118,178 (תזרים עמ' 9). totalDebt = null: אין הלוואות/אג\"ח, אך החלות השוטפת של התחייבויות החכירה אינה מוצגת בנפרד בדוחות התמציתיים (רק חכירה לא שוטפת 5,158), לכן לא נרשם סכום חלקי. שווי שוק מ-MAYA ליום 26/10/2026."
+}
