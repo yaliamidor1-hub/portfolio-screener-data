@@ -1,0 +1,35 @@
+{
+  "ticker": "1087824",
+  "month": "2026-11",
+  "name": "אל על",
+  "symbol": "אלאל",
+  "issuerId": "1152",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 11271500,
+  "netIncomeAttributableTTM": 935746,
+  "equityAttributable": 3393498,
+  "ocfTTMBeforeCapex": 2867274,
+  "totalDebt": null,
+  "fcfTTM": null,
+  "price": 1867,
+  "priceUnit": "agorot",
+  "priceDate": "2026-10-28",
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1152"
+    },
+    {
+      "url": "https://maya.tase.co.il/he/reports/1761500"
+    },
+    {
+      "url": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1087824"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוחות ב-USD (אלפי $), הומרו בשער 3.063. תקציר MAYA: רווח מיוחס TTM = 403,200+57,000-154,700 = 305,500; הון מיוחס = 1,128,900-21,000 = 1,107,900; OCF TTM = 1,046,200+591,600-701,700 = 936,100. totalDebt ו-fcfTTM = null: קובץ ה-PDF של דוח רבעון 2 (MAYA 1761500) כולל רק את דוח הדירקטוריון ודוחות חברת המועדון; הדוחות המאוחדים המלאים (חכירות, הלוואות, רכישת מטוסים) לא נקראו. חברת תעופה: CAPEX כבד (מטוסים). שווי שוק מ-MAYA ליום 26/10/2026."
+}

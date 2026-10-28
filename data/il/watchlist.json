@@ -158,6 +158,14 @@
       "issuerId": "2174",
       "isFinancial": false,
       "addedMonth": "2026-11"
+    },
+    {
+      "ticker": "1087824",
+      "name": "אל על",
+      "symbol": "אלאל",
+      "issuerId": "1152",
+      "isFinancial": false,
+      "addedMonth": "2026-11"
     }
   ]
 }
