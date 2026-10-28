@@ -1,0 +1,35 @@
+{
+  "ticker": "1175116",
+  "month": "2026-11",
+  "name": "נאייקס",
+  "symbol": "ניקס",
+  "issuerId": "1894",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 5815203,
+  "netIncomeAttributableTTM": 24109,
+  "equityAttributable": 751602,
+  "ocfTTMBeforeCapex": 86903,
+  "totalDebt": 1097850,
+  "fcfTTM": null,
+  "price": 15660,
+  "priceUnit": "agorot",
+  "priceDate": "2026-10-28",
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1894"
+    },
+    {
+      "url": "https://maya.tase.co.il/he/reports/1762474"
+    },
+    {
+      "url": "https://www.bizportal.co.il/capitalmarket/quote/generalpage/1175116"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוחות ב-USD (אלפי $), הומרו בשער 3.063. דוחות כספיים 6-K ליום 30.6.26 (MAYA 1762474). רווח מיוחס TTM = 35,516-8,837-18,808 = 7,871 (תקציר MAYA); הון = 245,381. totalDebt = הלוואות בנקאיות 3,220+8,855 + אג\"ח (Debentures) 337,053 + חכירה 3,455+5,840 = 358,423 אלפי $ (מאזן F-3; ללא התחייבויות אחרות לזמן ארוך שהן תמורה נדחית). fcfTTM = null: בדוח הביניים אין עמודת תזרים שנתי ל-2025 (נדרש 20-F), ולכן אין TTM מלא של capex. שווי שוק מ-MAYA ליום 26/10/2026."
+}
