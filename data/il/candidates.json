@@ -1,80 +1,8 @@
 {
- "generatedAt": "2026-10-28T10:30:20.712Z",
+ "generatedAt": "2026-10-29T10:51:27.993Z",
  "source": "arden 2026",
  "count": 60,
  "candidates": [
-  {
-   "issuerId": "156",
-   "name": "מלם תים",
-   "category": "שירותי IT",
-   "rating": "interesting",
-   "marketCapText": "1,791 מ׳",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/156"
-  },
-  {
-   "issuerId": "1948",
-   "name": "טרמינל איקס",
-   "category": "רשתות שיווק",
-   "rating": "interesting",
-   "marketCapText": "900 מ׳",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/1948"
-  },
-  {
-   "issuerId": "1916",
-   "name": "נקסט ויז’ן",
-   "category": "חברות ביטחוניות",
-   "rating": "watch",
-   "marketCapText": "28 מיליארד",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/1916"
-  },
-  {
-   "issuerId": "2174",
-   "name": "קמטק",
-   "category": "אלקטרוניקה ורכיבים",
-   "rating": "watch",
-   "marketCapText": "22.4 מיליארד",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/2174"
-  },
-  {
-   "issuerId": "1801",
-   "name": "דוראל אנרגיה",
-   "category": "יזמות סולארית ואנרגיה מתחדשת",
-   "rating": "watch",
-   "marketCapText": "12 מיליארד",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/1801"
-  },
-  {
-   "issuerId": "1152",
-   "name": "אל-על",
-   "category": "מלונאות תעופה ותיירות",
-   "rating": "watch",
-   "marketCapText": "8 מיליארד",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/1152"
-  },
-  {
-   "issuerId": "445",
-   "name": "מטריקס",
-   "category": "שירותי IT",
-   "rating": "watch",
-   "marketCapText": "8 מיליארד",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/445"
-  },
-  {
-   "issuerId": "1894",
-   "name": "נאייקס",
-   "category": "שאר המניות בישראל – א’-ת’",
-   "rating": "watch",
-   "marketCapText": "6.6 מיליארד",
-   "financialCategory": false,
-   "mayaUrl": "https://maya.tase.co.il/he/companies/1894"
-  },
   {
    "issuerId": "1300",
    "name": "איירפורט סיטי",
@@ -542,6 +470,78 @@
    "marketCapText": "330 מ׳",
    "financialCategory": true,
    "mayaUrl": "https://maya.tase.co.il/he/companies/1287"
+  },
+  {
+   "issuerId": "1748",
+   "name": "כרמל קורפ",
+   "category": "ייצור משקאות ומזון",
+   "rating": "watch",
+   "marketCapText": "330 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1748"
+  },
+  {
+   "issuerId": "1310",
+   "name": "גולף",
+   "category": "רשתות שיווק",
+   "rating": "watch",
+   "marketCapText": "312 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1310"
+  },
+  {
+   "issuerId": "2170",
+   "name": "יוניטרוניקס",
+   "category": "אלקטרוניקה ורכיבים",
+   "rating": "watch",
+   "marketCapText": "308 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/2170"
+  },
+  {
+   "issuerId": "382",
+   "name": "אמת מיחשוב",
+   "category": "שירותי IT",
+   "rating": "watch",
+   "marketCapText": "300 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/382"
+  },
+  {
+   "issuerId": "1978",
+   "name": "אלומה",
+   "category": "קרנות תשתיות ",
+   "rating": "watch",
+   "marketCapText": "295 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1978"
+  },
+  {
+   "issuerId": "543",
+   "name": "כנפיים אחזקות",
+   "category": "חברות החזקה מגוונות",
+   "rating": "watch",
+   "marketCapText": "285 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/543"
+  },
+  {
+   "issuerId": "1081",
+   "name": "טופ גרופ/ טופ מערכות",
+   "category": "חברות תוכנה",
+   "rating": "watch",
+   "marketCapText": "275 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/1081"
+  },
+  {
+   "issuerId": "386",
+   "name": "קווינקו",
+   "category": "מלונאות תעופה ותיירות",
+   "rating": "watch",
+   "marketCapText": "265 מ׳",
+   "financialCategory": false,
+   "mayaUrl": "https://maya.tase.co.il/he/companies/386"
   }
  ]
 }
