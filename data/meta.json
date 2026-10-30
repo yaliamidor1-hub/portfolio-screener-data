@@ -1,36 +1,26 @@
 {
-  "generatedAt": "2026-10-29T10:44:56.455Z",
+  "generatedAt": "2026-10-30T10:44:31.785Z",
   "tickersTotal": 59,
-  "succeeded": 58,
-  "unchanged": 7,
-  "failed": 1,
+  "succeeded": 59,
+  "unchanged": 49,
+  "failed": 0,
   "tagCount": 23,
-  "failures": [
-    {
-      "ticker": "VLTO",
-      "reason": "no XBRL data for any tag (no US-GAAP/IFRS filings found)"
-    }
-  ],
+  "failures": [],
   "filings": {
-    "generatedAt": "2026-10-29T10:50:07.523Z",
+    "generatedAt": "2026-10-30T10:49:43.028Z",
     "tickersTotal": 59,
-    "fetched": 0,
+    "fetched": 1,
     "unchanged": 58,
-    "skipped": 1,
+    "skipped": 0,
     "failed": 0,
-    "reasons": [
-      {
-        "ticker": "VLTO",
-        "reason": "no CIK (no SEC data bundle for this ticker)"
-      }
-    ]
+    "reasons": []
   },
   "releases": {
-    "generatedAt": "2026-10-29T10:50:20.209Z",
+    "generatedAt": "2026-10-30T10:49:56.283Z",
     "tickersTotal": 59,
-    "fetched": 10,
-    "unchanged": 46,
-    "skipped": 1,
+    "fetched": 7,
+    "unchanged": 50,
+    "skipped": 0,
     "failed": 2,
     "reasons": [
       {
@@ -88,10 +78,6 @@
       {
         "ticker": "CHKP",
         "reason": "no release text could be read (previous file kept)"
-      },
-      {
-        "ticker": "VLTO",
-        "reason": "no CIK"
       }
     ]
   }
