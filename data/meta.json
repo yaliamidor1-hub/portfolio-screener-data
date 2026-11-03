@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-02T12:03:02.935Z",
+  "generatedAt": "2026-11-03T11:40:38.011Z",
   "tickersTotal": 59,
   "succeeded": 59,
-  "unchanged": 49,
+  "unchanged": 54,
   "failed": 0,
   "tagCount": 23,
   "failures": [],
   "filings": {
-    "generatedAt": "2026-11-02T12:08:02.150Z",
+    "generatedAt": "2026-11-03T11:45:37.538Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 59,
@@ -16,10 +16,10 @@
     "reasons": []
   },
   "releases": {
-    "generatedAt": "2026-11-02T12:08:15.004Z",
+    "generatedAt": "2026-11-03T11:45:50.385Z",
     "tickersTotal": 59,
-    "fetched": 3,
-    "unchanged": 55,
+    "fetched": 6,
+    "unchanged": 52,
     "skipped": 0,
     "failed": 1,
     "reasons": [
@@ -49,6 +49,10 @@
       },
       {
         "ticker": "CHKP",
+        "reason": "0001178913-26-004953: no exhibit 99 found"
+      },
+      {
+        "ticker": "CHKP",
         "reason": "0001178913-26-004498: no exhibit 99 found"
       },
       {
@@ -66,10 +70,6 @@
       {
         "ticker": "CHKP",
         "reason": "0001178913-26-003128: no exhibit 99 found"
-      },
-      {
-        "ticker": "CHKP",
-        "reason": "0001178913-26-002310: no exhibit 99 found"
       },
       {
         "ticker": "CHKP",
