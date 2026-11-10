@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-09T12:35:31.831Z",
+  "generatedAt": "2026-11-10T12:11:48.338Z",
   "tickersTotal": 59,
   "succeeded": 59,
-  "unchanged": 38,
+  "unchanged": 57,
   "failed": 0,
   "tagCount": 23,
   "failures": [],
   "filings": {
-    "generatedAt": "2026-11-09T12:40:37.457Z",
+    "generatedAt": "2026-11-10T12:17:00.169Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 59,
@@ -16,13 +16,17 @@
     "reasons": []
   },
   "releases": {
-    "generatedAt": "2026-11-09T12:40:50.286Z",
+    "generatedAt": "2026-11-10T12:17:13.033Z",
     "tickersTotal": 59,
-    "fetched": 4,
-    "unchanged": 54,
+    "fetched": 5,
+    "unchanged": 53,
     "skipped": 0,
     "failed": 1,
     "reasons": [
+      {
+        "ticker": "TSM",
+        "reason": "0001046179-26-000796: no exhibit 99 found"
+      },
       {
         "ticker": "TSM",
         "reason": "0001046179-26-000728: no exhibit 99 found"
