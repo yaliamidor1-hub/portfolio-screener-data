@@ -1,0 +1,28 @@
+{
+  "ticker": "1175439",
+  "month": "2026-12",
+  "name": "סופווייב מדיקל",
+  "symbol": "סופב",
+  "issuerId": "1886",
+  "unit": "thousands",
+  "currency": "ILS",
+  "reportingCurrency": "USD",
+  "fx": 3.063,
+  "isFinancial": false,
+  "reportDate": "2026-06-30",
+  "marketCap": 1289844,
+  "netIncomeAttributableTTM": 27120,
+  "equityAttributable": 116455,
+  "ocfTTMBeforeCapex": 42429,
+  "source": [
+    {
+      "url": "https://maya.tase.co.il/he/companies/1886"
+    }
+  ],
+  "retrievedAt": "2026-10-28",
+  "notes": "דוחות ב-USD, הומרו בשער מרומז 3.063 לפי מכפילי MAYA; דוחות בדולר | דוח רבעון 2/חצי שנתי 2026 (MAYA 1761176, PDF), אלפי $, שער 3.063. totalDebt = התחייבויות חכירה 536 + חלויות שוטפות 891 = 1,427 (אין הלוואות/אג\"ח; מאזן עמ' 7-8). fcfTTM = OCF TTM 13,852 (13,295+2,888-2,331) - השקעה ברכוש קבוע 780 (534+399-153) - קרן חכירה 865 (812+431-378) = 12,207 (תזרים עמ' 8).",
+  "totalDebt": 4371,
+  "fcfTTM": 37390,
+  "carriedForward": true,
+  "carriedFrom": "2026-11"
+}
