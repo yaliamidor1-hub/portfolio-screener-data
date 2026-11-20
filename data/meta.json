@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-19T12:33:13.420Z",
+  "generatedAt": "2026-11-20T12:33:12.798Z",
   "tickersTotal": 59,
   "succeeded": 59,
-  "unchanged": 37,
+  "unchanged": 59,
   "failed": 0,
   "tagCount": 23,
   "failures": [],
   "filings": {
-    "generatedAt": "2026-11-19T12:38:19.359Z",
+    "generatedAt": "2026-11-20T12:38:19.567Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 59,
@@ -16,10 +16,10 @@
     "reasons": []
   },
   "releases": {
-    "generatedAt": "2026-11-19T12:38:32.197Z",
+    "generatedAt": "2026-11-20T12:38:32.465Z",
     "tickersTotal": 59,
-    "fetched": 4,
-    "unchanged": 54,
+    "fetched": 3,
+    "unchanged": 55,
     "skipped": 0,
     "failed": 1,
     "reasons": [
