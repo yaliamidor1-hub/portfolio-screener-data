@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-24T14:36:52.266Z",
+  "generatedAt": "2026-11-25T13:56:54.469Z",
   "tickersTotal": 59,
   "succeeded": 59,
-  "unchanged": 56,
+  "unchanged": 25,
   "failed": 0,
   "tagCount": 23,
   "failures": [],
   "filings": {
-    "generatedAt": "2026-11-24T14:41:51.811Z",
+    "generatedAt": "2026-11-25T14:01:56.635Z",
     "tickersTotal": 59,
     "fetched": 0,
     "unchanged": 59,
@@ -16,13 +16,21 @@
     "reasons": []
   },
   "releases": {
-    "generatedAt": "2026-11-24T14:42:04.677Z",
+    "generatedAt": "2026-11-25T14:02:09.478Z",
     "tickersTotal": 59,
-    "fetched": 3,
-    "unchanged": 55,
+    "fetched": 4,
+    "unchanged": 54,
     "skipped": 0,
     "failed": 1,
     "reasons": [
+      {
+        "ticker": "TSM",
+        "reason": "0001046179-26-000807: no exhibit 99 found"
+      },
+      {
+        "ticker": "TSM",
+        "reason": "0001046179-26-000805: no exhibit 99 found"
+      },
       {
         "ticker": "TSM",
         "reason": "0001046179-26-000800: no exhibit 99 found"
@@ -38,14 +46,6 @@
       {
         "ticker": "TSM",
         "reason": "0001046179-26-000728: no exhibit 99 found"
-      },
-      {
-        "ticker": "TSM",
-        "reason": "0001046179-26-000680: no exhibit 99 found"
-      },
-      {
-        "ticker": "TSM",
-        "reason": "0001046179-26-000660: no exhibit 99 found"
       },
       {
         "ticker": "CHKP",
